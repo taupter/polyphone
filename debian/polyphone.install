@@ -1,3 +1,2 @@
-debian/polyphone.desktop usr/share/applications
 bin/polyphone usr/bin/
 resources/polyphone.png usr/share/icons/

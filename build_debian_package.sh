@@ -39,17 +39,29 @@ cp -r debian polyphone-$1
 
 # Build package
 cd polyphone-$1
-dpkg-buildpackage
+dpkg-buildpackage || true
 cd ..
 
 # Revert rename
 mv polyphone-$1 sources
 
-# Delete directories
-rm -r sources/debian
-rm -r sources/generated_files
-rm -r sources/bin
-rm sources/Makefile
-rm polyphone_$1-1.debian.tar.xz
-rm polyphone_$1-1.dsc
-rm polyphone_$1-1_amd64.changes
+# Delete files
+rm -f polyphone_$1-1.debian.tar.xz
+rm -f polyphone_$1-1.dsc
+rm -f *.changes
+rm -f *.buildinfo
+rm -f polyphone_$1.orig.tar.gz
+rm -f polyphone-dbg*
+
+# Clean the source directory
+rm -rf sources/debian
+rm -rf sources/generated_files
+rm -rf sources/bin
+rm -rf sources/.qm
+rm -f sources/*.o
+rm -f sources/ui_*
+rm -f sources/moc_*
+rm -f sources/qrc_*
+rm -f sources/qmake_qmake_qm_files.qrc
+rm -f sources/Makefile
+rm -f sources/.qmake.stash
