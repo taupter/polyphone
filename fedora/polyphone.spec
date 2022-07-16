@@ -1,5 +1,5 @@
 Name:           polyphone
-Version:        2.2.0
+Version:        2.3.1
 Release:        1%{?dist}
 Summary:        Soundfont editor
 License:        GPLv3+n
@@ -52,10 +52,9 @@ mkdir -p %{buildroot}%{_datadir}/mime/packages
 mkdir -p %{buildroot}%{_docdir}/%{name}
 install -p -m 755 polyphone %{buildroot}%{_bindir}
 install -p -m 644 polyphone.png %{buildroot}%{_datadir}/icons
-install -p -m 644 ../debian/polyphone.sharedmimeinfo %{buildroot}%{_datadir}/mime/packages/polyphone.xml
-install -p -m 644 ../debian/changelog %{buildroot}%{_docdir}/%{name}
-install -p -m 644 ../debian/copyright %{buildroot}%{_docdir}/%{name}
-desktop-file-install --vendor="" --dir=%{buildroot}%{_datadir}/applications/ ../debian/%{name}.desktop
+install -p -m 644 ../sources/contrib/polyphone.xml %{buildroot}%{_datadir}/mime/packages/polyphone.xml
+install -p -m 644 ../sources/changelog %{buildroot}%{_docdir}/%{name}
+desktop-file-install --vendor="" --dir=%{buildroot}%{_datadir}/applications/ ../sources/contrib/com.polyphone_soundfonts.polyphone.desktop
 
 %post
 # icons
@@ -79,11 +78,11 @@ update-mime-database %{_datadir}/mime &> /dev/null || :
 update-desktop-database &> /dev/null || :
 
 %files
-%license ../debian/copyright
-%doc ../debian/polyphone.1
-%doc ../debian/polyphone.fr.1
+%license ../sources/LICENSE.txt
+%doc ../sources/contrib/man/man1/polyphone.1
+%doc ../sources/contrib/man/fr/man1/polyphone.1
 %{_bindir}/%{name}
 %{_docdir}/%{name}
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/com.polyphone_soundfonts.polyphone.desktop
 %{_datadir}/icons/polyphone.png
 %{_datadir}/mime/packages/polyphone.xml

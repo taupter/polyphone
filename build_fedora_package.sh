@@ -8,5 +8,5 @@ set -e
 # A RPM package will appear in fedora/x86_64
 
 cd fedora
-fedpkg --release f35 local
+fedpkg --release f36 local
 cd ..
