@@ -60,7 +60,7 @@ MainTabBar::~MainTabBar()
 
 void MainTabBar::addWidget(QWidget * widget, QString iconName, QString label, bool isColored)
 {
-    MainTabBarElement * tab = new MainTabBarElement(widget, iconName, isColored);
+    MainTabBarElement * tab = new MainTabBarElement(widget, iconName, isColored, this->fontMetrics());
     tab->setLabel(label);
     _tabs.append(tab);
     _firstTabDisplayed = -1; // Go to the last position
