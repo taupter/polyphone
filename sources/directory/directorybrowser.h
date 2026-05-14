@@ -49,6 +49,9 @@ public:
 signals:
     void itemDoubleClicked(QString filePath, EltID id);
 
+protected:
+    bool eventFilter(QObject *obj, QEvent *event) override;
+
 private slots:
     void on_pushRetry_clicked();
     void onDirectoryChanged(const QString &path);

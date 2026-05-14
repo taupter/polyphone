@@ -42,7 +42,8 @@ Editor::Editor(DialogKeyboard * dialogKeyboard, EltID initialSelection) : Soundf
     ui(new Ui::Editor),
     _pageSelector(new PageSelector()),
     _currentElementType(elementUnknown),
-    _initialSelection(initialSelection)
+    _initialSelection(initialSelection),
+    _firstShow(true)
 {
     ui->setupUi(this);
 
@@ -122,6 +123,7 @@ Editor::Editor(DialogKeyboard * dialogKeyboard, EltID initialSelection) : Soundf
     connect(SoundfontManager::getInstance(), SIGNAL(editingDone(QString, QList<int>)), this, SLOT(onEditingDone(QString, QList<int>)));
     connect(SoundfontManager::getInstance(), SIGNAL(errorEncountered(QString)), this, SLOT(onErrorEncountered(QString)));
     connect(this, SIGNAL(processKeyMainThread(int,int,int)), this, SLOT(onProcessKeyMainThread(int,int,int)));
+    ui->editFilter->installEventFilter(this);
 }
 
 Editor::~Editor()
@@ -279,6 +281,12 @@ void Editor::showEvent(QShowEvent* event)
 {
     QWidget::showEvent(event);
     customizeKeyboard();
+
+    if (_firstShow)
+    {
+        _firstShow = false;
+        ui->treeView->setFocus();
+    }
 }
 
 void Editor::onEditingDone(QString editingSource, QList<int> sf2Indexes)
@@ -694,4 +702,28 @@ void Editor::onActionRequired(TabAction action)
         ui->editFilter->setFocus();
         break;
     }
+}
+
+bool Editor::eventFilter(QObject *obj, QEvent *event)
+{
+    if (obj == ui->editFilter && event->type() == QEvent::KeyPress)
+    {
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+        if (keyEvent->key() == Qt::Key_Up)
+        {
+            // Select the first element in the list (if any)
+            if (ui->treeView->model() && ui->treeView->model()->rowCount() >= 4)
+            {
+                QModelIndex indexRootPrst = ui->treeView->model()->index(3, 0);
+                if (ui->treeView->model()->rowCount(indexRootPrst) > 0)
+                {
+                    ui->treeView->setFocus();
+                    ui->treeView->setCurrentIndex(ui->treeView->model()->index(ui->treeView->model()->rowCount(indexRootPrst) - 1, 0, indexRootPrst));
+                }
+            }
+            return true;
+        }
+    }
+
+    return Tab::eventFilter(obj, event);
 }

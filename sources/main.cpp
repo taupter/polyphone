@@ -267,17 +267,16 @@ int main(int argc, char *argv[])
     //return testVoice();
     //return testSynth();
 
-#if QT_VERSION < 0x060000
 #ifdef Q_OS_LINUX
     QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::RoundPreferFloor);
 #endif
+
+#if QT_VERSION < 0x060000
     // Dpi scaling
     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     qputenv("QT_ENABLE_HIGHDPI_SCALING", "1");
 #else
-#ifdef Q_OS_LINUX
-    QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
-#endif
+
 #endif
 
     QtSingleApplication app("polyphone", argc, argv);

@@ -59,6 +59,7 @@ protected:
     void tabInError(QString errorMessage) override;
     void tabInitialized(int indexSf2) override;
     void tabUpdate(QString editingSource) override;
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
     DialogKeyboard * _dialogKeyboard;
 
@@ -80,6 +81,7 @@ private:
     ElementType _currentElementType;
     IdList _currentIds;
     EltID _initialSelection;
+    bool _firstShow;
 };
 
 #endif // EDITOR_H

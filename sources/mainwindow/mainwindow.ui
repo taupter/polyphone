@@ -409,6 +409,18 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>pushHome</tabstop>
+  <tabstop>pushButtonNew</tabstop>
+  <tabstop>pushButtonOpen</tabstop>
+  <tabstop>pushButtonOpenDir</tabstop>
+  <tabstop>pushButtonDocumentation</tabstop>
+  <tabstop>pushButtonForum</tabstop>
+  <tabstop>pushButtonSettings</tabstop>
+  <tabstop>pushButtonSoundfonts</tabstop>
+  <tabstop>lineSearch</tabstop>
+  <tabstop>pushButtonSearch</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

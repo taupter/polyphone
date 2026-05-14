@@ -53,6 +53,7 @@ protected:
     void showEvent(QShowEvent * event) override;
     void resizeEvent(QResizeEvent * event) override;
     void keyPressEvent(QKeyEvent * event) override;
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
 private slots:
     void on_pushRetry_clicked();

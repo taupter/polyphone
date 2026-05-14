@@ -50,8 +50,7 @@
 
 const int MainWindow::RESIZE_BORDER_WIDTH = 5;
 
-MainWindow::MainWindow(bool playerMode, QWidget *parent) :
-    QWidget(parent),
+MainWindow::MainWindow(bool playerMode, QWidget *parent) : QWidget(parent),
     ui(new Ui::MainWindow),
     _recorder(new DialogRecorder(this)),
     _dialogAbout(this)
@@ -170,7 +169,6 @@ MainWindow::MainWindow(bool playerMode, QWidget *parent) :
         QTimer::singleShot(500, dialog, SLOT(show()));
     }
     ContextManager::configuration()->setValue(ConfManager::SECTION_NONE, "last_version_installed", SOFT_VERSION);
-    ui->widgetShowHistory->setFocus();
 }
 
 MainWindow::~MainWindow()

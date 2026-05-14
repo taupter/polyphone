@@ -30,6 +30,7 @@
 #include "soundfontmanager.h"
 #include <QInputDialog>
 #include <QMessageBox>
+#include <QKeyEvent>
 
 DirectoryBrowser::DirectoryBrowser(QWidget *parent) : Tab(parent),
     ui(new Ui::DirectoryBrowser),
@@ -82,6 +83,7 @@ DirectoryBrowser::DirectoryBrowser(QWidget *parent) : Tab(parent),
     connect(ui->listSamples, SIGNAL(itemDoubleClicked(QString,EltID)), this, SIGNAL(itemDoubleClicked(QString,EltID)));
     connect(ui->listInstruments, SIGNAL(itemDoubleClicked(QString,EltID)), this, SIGNAL(itemDoubleClicked(QString,EltID)));
     connect(ui->listPresets, SIGNAL(itemDoubleClicked(QString,EltID)), this, SIGNAL(itemDoubleClicked(QString,EltID)));
+    ui->lineSearch->installEventFilter(this);
 
     // Splitter
     CustomSplitter * splitter = new CustomSplitter(this, ui->widgetLeft, ui->widgetRight, "directory_browser_splitter_sizes");
@@ -322,4 +324,24 @@ void DirectoryBrowser::onActionRequired(TabAction action)
         ui->lineSearch->setFocus();
         break;
     }
+}
+
+bool DirectoryBrowser::eventFilter(QObject *obj, QEvent *event)
+{
+    if (obj == ui->lineSearch && event->type() == QEvent::KeyPress)
+    {
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+        if (keyEvent->key() == Qt::Key_Down)
+        {
+            // Select the first element in the list (if any)
+            if (ui->listView->model() && ui->listView->model()->rowCount() > 0)
+            {
+                ui->listView->setFocus();
+                ui->listView->setCurrentIndex(ui->listView->model()->index(0, 0));
+            }
+            return true;
+        }
+    }
+
+    return Tab::eventFilter(obj, event);
 }

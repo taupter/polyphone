@@ -91,6 +91,7 @@ SoundfontBrowser::SoundfontBrowser(QWidget *parent) : Tab(parent),
     connect(ui->filterGenre, SIGNAL(selectionChanged()), this, SLOT(updateFilter()));
     connect(ui->filterMidiStandard, SIGNAL(selectionChanged()), this, SLOT(updateFilter()));
     connect(ui->filterTag, SIGNAL(selectionChanged()), this, SLOT(updateFilter()));
+    ui->lineSearch->installEventFilter(this);
 
     // Connection with the user manager
     connect(UserManager::getInstance(), SIGNAL(connectionStateChanged(UserManager::ConnectionState)),
@@ -463,4 +464,24 @@ void SoundfontBrowser::onActionRequired(TabAction action)
         ui->lineSearch->setFocus();
         break;
     }
+}
+
+bool SoundfontBrowser::eventFilter(QObject *obj, QEvent *event)
+{
+    if (obj == ui->lineSearch && event->type() == QEvent::KeyPress)
+    {
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+        if (keyEvent->key() == Qt::Key_Down)
+        {
+            // Select the first element in the list (if any)
+            if (ui->listWidget->model() && ui->listWidget->model()->rowCount() > 0)
+            {
+                ui->listWidget->setFocus();
+                ui->listWidget->setCurrentIndex(ui->listWidget->model()->index(0, 0));
+            }
+            return true;
+        }
+    }
+
+    return Tab::eventFilter(obj, event);
 }
