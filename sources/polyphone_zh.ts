@@ -422,6 +422,19 @@
     </message>
 </context>
 <context>
+    <name>CalendarPopup</name>
+    <message>
+        <location filename="editor/widgets/styledlineeditwithcalendar.cpp" line="30"/>
+        <source>&amp;Cancel</source>
+        <translation>取消(&amp;C)</translation>
+    </message>
+    <message>
+        <location filename="editor/widgets/styledlineeditwithcalendar.cpp" line="31"/>
+        <source>&amp;Ok</source>
+        <translation>确定(&amp;O)</translation>
+    </message>
+</context>
+<context>
     <name>ConfManager</name>
     <message>
         <location filename="context/confmanager.cpp" line="219"/>
@@ -2018,74 +2031,74 @@ repository</source>
         <translation>搜索文件、采样、乐器或预设...</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="110"/>
+        <location filename="directory/directorybrowser.cpp" line="112"/>
         <source>The directory &quot;%1&quot; does not exist.</source>
         <translation>目录&quot;%1&quot;不存在。</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="117"/>
+        <location filename="directory/directorybrowser.cpp" line="119"/>
         <source>The directory &quot;%1&quot; is not readable.</source>
         <translation>目录“%1”不可读。</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="233"/>
+        <location filename="directory/directorybrowser.cpp" line="235"/>
         <source>Rename</source>
         <translation>重命名</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="234"/>
+        <location filename="directory/directorybrowser.cpp" line="236"/>
         <source>New name:</source>
         <translation>新名称：</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="236"/>
+        <location filename="directory/directorybrowser.cpp" line="238"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="237"/>
+        <location filename="directory/directorybrowser.cpp" line="239"/>
         <source>&amp;Ok</source>
         <translation>确定(&amp;O)</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="248"/>
+        <location filename="directory/directorybrowser.cpp" line="250"/>
         <source>A file with this name already exists.</source>
         <translation>具有此名称的文件已存在。</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="248"/>
-        <location filename="directory/directorybrowser.cpp" line="253"/>
-        <location filename="directory/directorybrowser.cpp" line="271"/>
+        <location filename="directory/directorybrowser.cpp" line="250"/>
+        <location filename="directory/directorybrowser.cpp" line="255"/>
+        <location filename="directory/directorybrowser.cpp" line="273"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="253"/>
+        <location filename="directory/directorybrowser.cpp" line="255"/>
         <source>Cannot rename file &quot;%1&quot;.</source>
         <translation>无法重命名文件 &quot;%1&quot;。</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="261"/>
+        <location filename="directory/directorybrowser.cpp" line="263"/>
         <source>Confirm deletion</source>
         <translation>确认删除</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="262"/>
+        <location filename="directory/directorybrowser.cpp" line="264"/>
         <source>Are you sure you want to delete file &quot;%1&quot;?</source>
         <translation>您确定要删除文件“%1”吗？</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="264"/>
+        <location filename="directory/directorybrowser.cpp" line="266"/>
         <source>&amp;Yes</source>
         <translation>是(&amp;Y)</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="265"/>
+        <location filename="directory/directorybrowser.cpp" line="267"/>
         <source>&amp;No</source>
         <translation>否(&amp;N)</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="271"/>
+        <location filename="directory/directorybrowser.cpp" line="273"/>
         <source>Cannot delete file &quot;%1&quot;.</source>
         <translation>无法删除文件 &quot;%1&quot;。</translation>
     </message>
@@ -2374,7 +2387,7 @@ repository</source>
         <translation>无法打开文件</translation>
     </message>
     <message>
-        <location filename="editor/editor.cpp" line="483"/>
+        <location filename="editor/editor.cpp" line="494"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
@@ -2804,12 +2817,12 @@ repository</source>
         <translation>设置(&amp;S)</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainmenu.cpp" line="100"/>
+        <location filename="mainwindow/mainmenu.cpp" line="101"/>
         <source>Online &amp;manual</source>
         <translation>在线手册(&amp;M)</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainmenu.cpp" line="106"/>
+        <location filename="mainwindow/mainmenu.cpp" line="107"/>
         <source>About &amp;Polyphone...</source>
         <translation>关于 Polyphone(&amp;P)...</translation>
     </message>
@@ -2819,7 +2832,7 @@ repository</source>
         <translation>关闭文件(&amp;C)</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainmenu.cpp" line="112"/>
+        <location filename="mainwindow/mainmenu.cpp" line="113"/>
         <source>&amp;Quit</source>
         <translation>退出(&amp;Q)</translation>
     </message>
@@ -2882,68 +2895,68 @@ repository</source>
         <translation>正在打开目录</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="359"/>
+        <location filename="mainwindow/mainwindow.ui" line="356"/>
         <source>  Settings</source>
         <extracomment>prefixed with 2 spaces</extracomment>
         <translation>  设置</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="315"/>
+        <location filename="mainwindow/mainwindow.ui" line="312"/>
         <source>  Documentation</source>
         <extracomment>prefixed with 2 spaces</extracomment>
         <translation>  文档</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="78"/>
+        <location filename="mainwindow/mainwindow.cpp" line="66"/>
         <source>Home screen</source>
         <translation>主屏幕</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="121"/>
+        <location filename="mainwindow/mainwindow.ui" line="118"/>
         <source>  New
   soundfont</source>
         <extracomment>prefixed with 2 spaces for each line</extracomment>
         <translation>  新音色库</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="155"/>
+        <location filename="mainwindow/mainwindow.ui" line="152"/>
         <source>  Open
   directory</source>
         <extracomment>prefixed with 2 spaces for each line</extracomment>
         <translation>  打开目录</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="337"/>
+        <location filename="mainwindow/mainwindow.ui" line="334"/>
         <source>  Forum</source>
         <extracomment>prefixed with 2 spaces</extracomment>
         <translation>  论坛</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="252"/>
+        <location filename="mainwindow/mainwindow.ui" line="249"/>
         <source>Daily soundfonts</source>
         <translation>每日音色库</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="262"/>
+        <location filename="mainwindow/mainwindow.ui" line="259"/>
         <source>  Online
   repository</source>
         <extracomment>prefixed with 2 spaces for each line</extracomment>
         <translation>  在线仓库</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="201"/>
+        <location filename="mainwindow/mainwindow.ui" line="198"/>
         <source>Search a soundfont...</source>
         <translation>搜索音色库...</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="138"/>
+        <location filename="mainwindow/mainwindow.ui" line="135"/>
         <source>  Open
   soundfont</source>
         <extracomment>prefixed with 2 spaces for each line</extracomment>
         <translation>  打开音色库</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="284"/>
+        <location filename="mainwindow/mainwindow.ui" line="281"/>
         <source>History</source>
         <translation>历史</translation>
     </message>
@@ -5154,6 +5167,14 @@ download the list</source>
     </message>
 </context>
 <context>
+    <name>SoundfontTab</name>
+    <message>
+        <location filename="mainwindow/soundfonttab.cpp" line="90"/>
+        <source>Untitled</source>
+        <translation>未命名</translation>
+    </message>
+</context>
+<context>
     <name>SoundfontViewer</name>
     <message>
         <location filename="repository/soundfont/soundfontviewer.ui" line="112"/>
@@ -5253,14 +5274,6 @@ download content</source>
     </message>
 </context>
 <context>
-    <name>Tab</name>
-    <message>
-        <location filename="mainwindow/tab.cpp" line="90"/>
-        <source>Untitled</source>
-        <translation>未命名</translation>
-    </message>
-</context>
-<context>
     <name>TabManager</name>
     <message>
         <location filename="mainwindow/tabmanager.cpp" line="109"/>
@@ -5314,7 +5327,7 @@ download content</source>
         <translation>不保存(&amp;N)</translation>
     </message>
     <message>
-        <location filename="mainwindow/tabmanager.cpp" line="410"/>
+        <location filename="mainwindow/tabmanager.cpp" line="412"/>
         <source>User area</source>
         <translation>用户区</translation>
     </message>
@@ -7199,22 +7212,22 @@ Other soundfont editors might display other units.</source>
 <context>
     <name>TreeView</name>
     <message>
-        <location filename="editor/tree/treeview.cpp" line="966"/>
+        <location filename="editor/tree/treeview.cpp" line="961"/>
         <source>instrument</source>
         <translation>乐器</translation>
     </message>
     <message>
-        <location filename="editor/tree/treeview.cpp" line="966"/>
+        <location filename="editor/tree/treeview.cpp" line="961"/>
         <source>preset</source>
         <translation>预设</translation>
     </message>
     <message>
-        <location filename="editor/tree/treeview.cpp" line="987"/>
+        <location filename="editor/tree/treeview.cpp" line="982"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="editor/tree/treeview.cpp" line="987"/>
+        <location filename="editor/tree/treeview.cpp" line="982"/>
         <source>Cannot create more presets.</source>
         <translation>无法创建更多预设。</translation>
     </message>

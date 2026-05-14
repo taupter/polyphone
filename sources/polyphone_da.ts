@@ -450,6 +450,19 @@
     </message>
 </context>
 <context>
+    <name>CalendarPopup</name>
+    <message>
+        <location filename="editor/widgets/styledlineeditwithcalendar.cpp" line="30"/>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Afbryd</translation>
+    </message>
+    <message>
+        <location filename="editor/widgets/styledlineeditwithcalendar.cpp" line="31"/>
+        <source>&amp;Ok</source>
+        <translation>&amp;Ok</translation>
+    </message>
+</context>
+<context>
     <name>ConfManager</name>
     <message>
         <location filename="context/confmanager.cpp" line="219"/>
@@ -2066,79 +2079,79 @@ oversigt</translation>
         <translation>Søg efter en fil, en sample, et instrument eller et preset...</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="110"/>
+        <location filename="directory/directorybrowser.cpp" line="112"/>
         <source>The directory &quot;%1&quot; does not exist.</source>
         <oldsource>The directory &quot;%1&quot; doesn&apos;t exist.</oldsource>
         <translation>Mappen &quot;%1&quot; findes ikke.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="117"/>
+        <location filename="directory/directorybrowser.cpp" line="119"/>
         <source>The directory &quot;%1&quot; is not readable.</source>
         <translation>Mappen &quot;%1&quot; kan ikke læses.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="233"/>
+        <location filename="directory/directorybrowser.cpp" line="235"/>
         <source>Rename</source>
         <translation>Omdøb</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="234"/>
+        <location filename="directory/directorybrowser.cpp" line="236"/>
         <source>New name:</source>
         <translation>Nyt navn:</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="236"/>
+        <location filename="directory/directorybrowser.cpp" line="238"/>
         <source>&amp;Cancel</source>
         <oldsource>Cancel</oldsource>
         <translation>&amp;Afbryd</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="237"/>
+        <location filename="directory/directorybrowser.cpp" line="239"/>
         <source>&amp;Ok</source>
         <oldsource>Ok</oldsource>
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="248"/>
+        <location filename="directory/directorybrowser.cpp" line="250"/>
         <source>A file with this name already exists.</source>
         <translation>En fil med dette navn findes allerede.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="248"/>
-        <location filename="directory/directorybrowser.cpp" line="253"/>
-        <location filename="directory/directorybrowser.cpp" line="271"/>
+        <location filename="directory/directorybrowser.cpp" line="250"/>
+        <location filename="directory/directorybrowser.cpp" line="255"/>
+        <location filename="directory/directorybrowser.cpp" line="273"/>
         <source>Warning</source>
         <translation>Advarsel</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="253"/>
+        <location filename="directory/directorybrowser.cpp" line="255"/>
         <source>Cannot rename file &quot;%1&quot;.</source>
         <translation>Kan ikke omdøbe filen &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="261"/>
+        <location filename="directory/directorybrowser.cpp" line="263"/>
         <source>Confirm deletion</source>
         <translation>Bekræft sletning</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="262"/>
+        <location filename="directory/directorybrowser.cpp" line="264"/>
         <source>Are you sure you want to delete file &quot;%1&quot;?</source>
         <translation>Er du sikker på, at du vil slette filen &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="264"/>
+        <location filename="directory/directorybrowser.cpp" line="266"/>
         <source>&amp;Yes</source>
         <oldsource>Yes</oldsource>
         <translation>&amp;Ja</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="265"/>
+        <location filename="directory/directorybrowser.cpp" line="267"/>
         <source>&amp;No</source>
         <oldsource>No</oldsource>
         <translation>&amp;Nej</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="271"/>
+        <location filename="directory/directorybrowser.cpp" line="273"/>
         <source>Cannot delete file &quot;%1&quot;.</source>
         <translation>Kan ikke slette filen &quot;%1&quot;.</translation>
     </message>
@@ -2434,7 +2447,7 @@ oversigt</translation>
         <translation>Kan ikke åbne filen</translation>
     </message>
     <message>
-        <location filename="editor/editor.cpp" line="483"/>
+        <location filename="editor/editor.cpp" line="494"/>
         <source>Warning</source>
         <translation>Advarsel</translation>
     </message>
@@ -2865,12 +2878,12 @@ oversigt</translation>
         <translation>&amp;Indstillinger</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainmenu.cpp" line="100"/>
+        <location filename="mainwindow/mainmenu.cpp" line="101"/>
         <source>Online &amp;manual</source>
         <translation>Online &amp;manual</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainmenu.cpp" line="106"/>
+        <location filename="mainwindow/mainmenu.cpp" line="107"/>
         <source>About &amp;Polyphone...</source>
         <translation>Om &amp;Polyphone...</translation>
     </message>
@@ -2880,7 +2893,7 @@ oversigt</translation>
         <translation>&amp;Luk fil</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainmenu.cpp" line="112"/>
+        <location filename="mainwindow/mainmenu.cpp" line="113"/>
         <source>&amp;Quit</source>
         <translation>A&amp;fslut</translation>
     </message>
@@ -2943,24 +2956,24 @@ oversigt</translation>
         <translation>Åbner en mappe</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="359"/>
+        <location filename="mainwindow/mainwindow.ui" line="356"/>
         <source>  Settings</source>
         <extracomment>prefixed with 2 spaces</extracomment>
         <translation>  Indstillinger</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="315"/>
+        <location filename="mainwindow/mainwindow.ui" line="312"/>
         <source>  Documentation</source>
         <extracomment>prefixed with 2 spaces</extracomment>
         <translation>  Documentation</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="78"/>
+        <location filename="mainwindow/mainwindow.cpp" line="66"/>
         <source>Home screen</source>
         <translation>Startskærm</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="121"/>
+        <location filename="mainwindow/mainwindow.ui" line="118"/>
         <source>  New
   soundfont</source>
         <extracomment>prefixed with 2 spaces for each line</extracomment>
@@ -2968,7 +2981,7 @@ oversigt</translation>
   soundfont</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="155"/>
+        <location filename="mainwindow/mainwindow.ui" line="152"/>
         <source>  Open
   directory</source>
         <extracomment>prefixed with 2 spaces for each line</extracomment>
@@ -2976,18 +2989,18 @@ oversigt</translation>
   mappe</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="337"/>
+        <location filename="mainwindow/mainwindow.ui" line="334"/>
         <source>  Forum</source>
         <extracomment>prefixed with 2 spaces</extracomment>
         <translation>  Forum</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="252"/>
+        <location filename="mainwindow/mainwindow.ui" line="249"/>
         <source>Daily soundfonts</source>
         <translation>Daglige soundfonte</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="262"/>
+        <location filename="mainwindow/mainwindow.ui" line="259"/>
         <source>  Online
   repository</source>
         <extracomment>prefixed with 2 spaces for each line</extracomment>
@@ -2995,12 +3008,12 @@ oversigt</translation>
   filoversigt</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="201"/>
+        <location filename="mainwindow/mainwindow.ui" line="198"/>
         <source>Search a soundfont...</source>
         <translation>Søg soundfont...</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="138"/>
+        <location filename="mainwindow/mainwindow.ui" line="135"/>
         <source>  Open
   soundfont</source>
         <extracomment>prefixed with 2 spaces for each line</extracomment>
@@ -3008,7 +3021,7 @@ oversigt</translation>
   soundfont</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="284"/>
+        <location filename="mainwindow/mainwindow.ui" line="281"/>
         <source>History</source>
         <translation>Historik</translation>
     </message>
@@ -5234,6 +5247,14 @@ downloade listen</translation>
     </message>
 </context>
 <context>
+    <name>SoundfontTab</name>
+    <message>
+        <location filename="mainwindow/soundfonttab.cpp" line="90"/>
+        <source>Untitled</source>
+        <translation>Unavngiven</translation>
+    </message>
+</context>
+<context>
     <name>SoundfontViewer</name>
     <message>
         <location filename="repository/soundfont/soundfontviewer.ui" line="112"/>
@@ -5333,14 +5354,6 @@ downloade indholdet</translation>
     </message>
 </context>
 <context>
-    <name>Tab</name>
-    <message>
-        <location filename="mainwindow/tab.cpp" line="90"/>
-        <source>Untitled</source>
-        <translation>Unavngiven</translation>
-    </message>
-</context>
-<context>
     <name>TabManager</name>
     <message>
         <location filename="mainwindow/tabmanager.cpp" line="109"/>
@@ -5394,7 +5407,7 @@ downloade indholdet</translation>
         <translation>Ge&amp;m ikke</translation>
     </message>
     <message>
-        <location filename="mainwindow/tabmanager.cpp" line="410"/>
+        <location filename="mainwindow/tabmanager.cpp" line="412"/>
         <source>User area</source>
         <translation>Brugerområde</translation>
     </message>
@@ -7299,22 +7312,22 @@ Andre soundfont-editorer kan vise andre enheder.</translation>
 <context>
     <name>TreeView</name>
     <message>
-        <location filename="editor/tree/treeview.cpp" line="966"/>
+        <location filename="editor/tree/treeview.cpp" line="961"/>
         <source>instrument</source>
         <translation>instrument</translation>
     </message>
     <message>
-        <location filename="editor/tree/treeview.cpp" line="966"/>
+        <location filename="editor/tree/treeview.cpp" line="961"/>
         <source>preset</source>
         <translation>preset</translation>
     </message>
     <message>
-        <location filename="editor/tree/treeview.cpp" line="987"/>
+        <location filename="editor/tree/treeview.cpp" line="982"/>
         <source>Warning</source>
         <translation>Advarsel</translation>
     </message>
     <message>
-        <location filename="editor/tree/treeview.cpp" line="987"/>
+        <location filename="editor/tree/treeview.cpp" line="982"/>
         <source>Cannot create more presets.</source>
         <translation>Kan ikke oprette flere presets.</translation>
     </message>

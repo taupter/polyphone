@@ -422,6 +422,19 @@
     </message>
 </context>
 <context>
+    <name>CalendarPopup</name>
+    <message>
+        <location filename="editor/widgets/styledlineeditwithcalendar.cpp" line="30"/>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Zrušit</translation>
+    </message>
+    <message>
+        <location filename="editor/widgets/styledlineeditwithcalendar.cpp" line="31"/>
+        <source>&amp;Ok</source>
+        <translation>&amp;OK</translation>
+    </message>
+</context>
+<context>
     <name>ConfManager</name>
     <message>
         <location filename="context/confmanager.cpp" line="219"/>
@@ -2034,79 +2047,79 @@ repository</source>
         <translation>Hledat soubor, vzorek, nástroj nebo přednastavení...</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="110"/>
+        <location filename="directory/directorybrowser.cpp" line="112"/>
         <source>The directory &quot;%1&quot; does not exist.</source>
         <oldsource>The directory &quot;%1&quot; doesn&apos;t exist.</oldsource>
         <translation>Adresář &quot;%1&quot; neexistuje.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="117"/>
+        <location filename="directory/directorybrowser.cpp" line="119"/>
         <source>The directory &quot;%1&quot; is not readable.</source>
         <translation>Adresář &quot;%1&quot; není čitelný.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="233"/>
+        <location filename="directory/directorybrowser.cpp" line="235"/>
         <source>Rename</source>
         <translation>Přejmenovat</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="234"/>
+        <location filename="directory/directorybrowser.cpp" line="236"/>
         <source>New name:</source>
         <translation>Nový název:</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="236"/>
+        <location filename="directory/directorybrowser.cpp" line="238"/>
         <source>&amp;Cancel</source>
         <oldsource>Cancel</oldsource>
         <translation>&amp;Zrušit</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="237"/>
+        <location filename="directory/directorybrowser.cpp" line="239"/>
         <source>&amp;Ok</source>
         <oldsource>Ok</oldsource>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="248"/>
+        <location filename="directory/directorybrowser.cpp" line="250"/>
         <source>A file with this name already exists.</source>
         <translation>Soubor s tímto názvem již existuje.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="248"/>
-        <location filename="directory/directorybrowser.cpp" line="253"/>
-        <location filename="directory/directorybrowser.cpp" line="271"/>
+        <location filename="directory/directorybrowser.cpp" line="250"/>
+        <location filename="directory/directorybrowser.cpp" line="255"/>
+        <location filename="directory/directorybrowser.cpp" line="273"/>
         <source>Warning</source>
         <translation>Pozor</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="253"/>
+        <location filename="directory/directorybrowser.cpp" line="255"/>
         <source>Cannot rename file &quot;%1&quot;.</source>
         <translation>Nelze přejmenovat soubor &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="261"/>
+        <location filename="directory/directorybrowser.cpp" line="263"/>
         <source>Confirm deletion</source>
         <translation>Potvrdit smazání</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="262"/>
+        <location filename="directory/directorybrowser.cpp" line="264"/>
         <source>Are you sure you want to delete file &quot;%1&quot;?</source>
         <translation>Opravdu chcete smazat soubor &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="264"/>
+        <location filename="directory/directorybrowser.cpp" line="266"/>
         <source>&amp;Yes</source>
         <oldsource>Yes</oldsource>
         <translation>&amp;Ano</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="265"/>
+        <location filename="directory/directorybrowser.cpp" line="267"/>
         <source>&amp;No</source>
         <oldsource>No</oldsource>
         <translation>&amp;Ne</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="271"/>
+        <location filename="directory/directorybrowser.cpp" line="273"/>
         <source>Cannot delete file &quot;%1&quot;.</source>
         <translation>Nelze odstranit soubor &quot;%1&quot;.</translation>
     </message>
@@ -2406,7 +2419,7 @@ repository</source>
         <translation>Nelze otevřít soubor</translation>
     </message>
     <message>
-        <location filename="editor/editor.cpp" line="483"/>
+        <location filename="editor/editor.cpp" line="494"/>
         <source>Warning</source>
         <translation>Pozor</translation>
     </message>
@@ -2838,12 +2851,12 @@ repository</source>
         <translation>&amp;Nastavení</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainmenu.cpp" line="100"/>
+        <location filename="mainwindow/mainmenu.cpp" line="101"/>
         <source>Online &amp;manual</source>
         <translation>Online &amp;příručka</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainmenu.cpp" line="106"/>
+        <location filename="mainwindow/mainmenu.cpp" line="107"/>
         <source>About &amp;Polyphone...</source>
         <translation>O programu &amp;Polyphone...</translation>
     </message>
@@ -2853,7 +2866,7 @@ repository</source>
         <translation>&amp;Zavřít soubor</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainmenu.cpp" line="112"/>
+        <location filename="mainwindow/mainmenu.cpp" line="113"/>
         <source>&amp;Quit</source>
         <translation>U&amp;končit</translation>
     </message>
@@ -2916,24 +2929,24 @@ repository</source>
         <translation>Otevírá se adresář</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="359"/>
+        <location filename="mainwindow/mainwindow.ui" line="356"/>
         <source>  Settings</source>
         <extracomment>prefixed with 2 spaces</extracomment>
         <translation>  Nastavení</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="315"/>
+        <location filename="mainwindow/mainwindow.ui" line="312"/>
         <source>  Documentation</source>
         <extracomment>prefixed with 2 spaces</extracomment>
         <translation>  Dokumentace</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="78"/>
+        <location filename="mainwindow/mainwindow.cpp" line="66"/>
         <source>Home screen</source>
         <translation>Domovská obrazovka</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="121"/>
+        <location filename="mainwindow/mainwindow.ui" line="118"/>
         <source>  New
   soundfont</source>
         <extracomment>prefixed with 2 spaces for each line</extracomment>
@@ -2941,7 +2954,7 @@ repository</source>
   zvuková banka</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="155"/>
+        <location filename="mainwindow/mainwindow.ui" line="152"/>
         <source>  Open
   directory</source>
         <extracomment>prefixed with 2 spaces for each line</extracomment>
@@ -2949,18 +2962,18 @@ repository</source>
   adresář</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="337"/>
+        <location filename="mainwindow/mainwindow.ui" line="334"/>
         <source>  Forum</source>
         <extracomment>prefixed with 2 spaces</extracomment>
         <translation>  Fórum</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="252"/>
+        <location filename="mainwindow/mainwindow.ui" line="249"/>
         <source>Daily soundfonts</source>
         <translation>Denně zvukové banky</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="262"/>
+        <location filename="mainwindow/mainwindow.ui" line="259"/>
         <source>  Online
   repository</source>
         <extracomment>prefixed with 2 spaces for each line</extracomment>
@@ -2968,12 +2981,12 @@ repository</source>
   úložiště</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="201"/>
+        <location filename="mainwindow/mainwindow.ui" line="198"/>
         <source>Search a soundfont...</source>
         <translation>Hledat zvukovou banku...</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="138"/>
+        <location filename="mainwindow/mainwindow.ui" line="135"/>
         <source>  Open
   soundfont</source>
         <extracomment>prefixed with 2 spaces for each line</extracomment>
@@ -2981,7 +2994,7 @@ repository</source>
   zvukovou banku</translation>
     </message>
     <message>
-        <location filename="mainwindow/mainwindow.ui" line="284"/>
+        <location filename="mainwindow/mainwindow.ui" line="281"/>
         <source>History</source>
         <translation>Historie</translation>
     </message>
@@ -5224,6 +5237,14 @@ Nelze stáhnout seznam</translation>
     </message>
 </context>
 <context>
+    <name>SoundfontTab</name>
+    <message>
+        <location filename="mainwindow/soundfonttab.cpp" line="90"/>
+        <source>Untitled</source>
+        <translation>Bez názvu</translation>
+    </message>
+</context>
+<context>
     <name>SoundfontViewer</name>
     <message>
         <location filename="repository/soundfont/soundfontviewer.ui" line="112"/>
@@ -5323,14 +5344,6 @@ Nelze stáhnout obsah</translation>
     </message>
 </context>
 <context>
-    <name>Tab</name>
-    <message>
-        <location filename="mainwindow/tab.cpp" line="90"/>
-        <source>Untitled</source>
-        <translation>Bez názvu</translation>
-    </message>
-</context>
-<context>
     <name>TabManager</name>
     <message>
         <location filename="mainwindow/tabmanager.cpp" line="109"/>
@@ -5384,7 +5397,7 @@ Nelze stáhnout obsah</translation>
         <translation>&amp;Zavřít bez uložení</translation>
     </message>
     <message>
-        <location filename="mainwindow/tabmanager.cpp" line="410"/>
+        <location filename="mainwindow/tabmanager.cpp" line="412"/>
         <source>User area</source>
         <translation>Uživatelská oblast</translation>
     </message>
@@ -7294,22 +7307,22 @@ Jiné editory soundfontů mohou zobrazovat jiné jednotky.</translation>
 <context>
     <name>TreeView</name>
     <message>
-        <location filename="editor/tree/treeview.cpp" line="966"/>
+        <location filename="editor/tree/treeview.cpp" line="961"/>
         <source>instrument</source>
         <translation>Nástroj</translation>
     </message>
     <message>
-        <location filename="editor/tree/treeview.cpp" line="966"/>
+        <location filename="editor/tree/treeview.cpp" line="961"/>
         <source>preset</source>
         <translation>Přednastavení</translation>
     </message>
     <message>
-        <location filename="editor/tree/treeview.cpp" line="987"/>
+        <location filename="editor/tree/treeview.cpp" line="982"/>
         <source>Warning</source>
         <translation>Pozor</translation>
     </message>
     <message>
-        <location filename="editor/tree/treeview.cpp" line="987"/>
+        <location filename="editor/tree/treeview.cpp" line="982"/>
         <source>Cannot create more presets.</source>
         <translation>Nelze vytvořit více přednastavení.</translation>
     </message>
