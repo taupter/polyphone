@@ -96,8 +96,6 @@ jobs:
       - name: Create AppImage
         env:
           OUTPUT: Polyphone_${{ inputs.tag }}-linux_aarch64.AppImage
-          EXTRA_PLATFORM_PLUGINS: "libqwayland-egl.so;libqwayland-generic.so"
-          EXTRA_QT_PLUGINS: "waylandcompositor"
         run: |
           # Install linuxdeploy
           wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-aarch64.AppImage
