@@ -25,22 +25,23 @@
 #ifndef MAINTABBARELEMENT_H
 #define MAINTABBARELEMENT_H
 
-#include <QWidget>
+#include <QObject>
 #include <QPainter>
 #include <QPainterPath>
+class Tab;
 
 class MainTabBarElement: QObject
 {
     Q_OBJECT
 
 public:
-    MainTabBarElement(QWidget * widget, QString iconName, bool isColored, QFontMetrics fm);
+    MainTabBarElement(Tab * tab, QString iconName, bool isColored, QFontMetrics fm);
 
     void setLabel(QString label);
     void setTooltip(QString toolTip) { _toolTip = toolTip; }
     void setIsEnabled(bool isEnabled) { _isEnabled = isEnabled; }
 
-    QWidget * getWidget() { return _widget; }
+    Tab * getWidget() { return _tab; }
     QString getToolTip() {  return _toolTip; }
     QPainterPath getPath() { return _tabPath; }
     QPainterPath getCloseButtonPath() { return _closeButtonPath; }
@@ -74,7 +75,7 @@ private:
     static const int MARGIN;
 
     // Configuration
-    QWidget * _widget;
+    Tab * _tab;
     QString _iconName;
     QString _label;
     QString _toolTip;

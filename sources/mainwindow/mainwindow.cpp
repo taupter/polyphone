@@ -46,6 +46,7 @@
 #include "extensionmanager.h"
 #include "utils.h"
 #include "playeroptions.h"
+#include "tab.h"
 
 const int MainWindow::RESIZE_BORDER_WIDTH = 5;
 
@@ -384,10 +385,19 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
         {
         case Qt::Key_F: // Search
             if (ui->lineSearch->isVisible())
+            {
+                ui->lineSearch->selectAll();
                 ui->lineSearch->setFocus();
+            }
+            else
+            {
+                Tab * currentTab = ui->tabBar->getCurrentTab();
+                if (currentTab != nullptr)
+                    currentTab->onActionRequired(Tab::SEARCH);
+            }
             event->accept();
             break;
-        case Qt::Key_H: // Go to home
+        case Qt::Key_H: // Go to the home screen
             _tabManager->showHome();
             event->accept();
             break;
@@ -420,12 +430,20 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
                 SoundfontManager::getInstance()->undo(currentSf2);
             event->accept();
         } break;
-        case Qt::Key_Tab: case Qt::Key_PageDown: // Go to next tab
-            _tabManager->setCurrentWidget(ui->tabBar->getNextWidget());
+        case Qt::Key_Home: // Go to the first tab
+            _tabManager->setCurrentWidget(ui->tabBar->getFirstTab());
             event->accept();
             break;
         case Qt::Key_PageUp: // Go to previous tab
-            _tabManager->setCurrentWidget(ui->tabBar->getPreviousWidget());
+            _tabManager->setCurrentWidget(ui->tabBar->getPreviousTab());
+            event->accept();
+            break;
+        case Qt::Key_Tab: case Qt::Key_PageDown: // Go to next tab
+            _tabManager->setCurrentWidget(ui->tabBar->getNextTab());
+            event->accept();
+            break;
+        case Qt::Key_End: // Go to the last tab
+            _tabManager->setCurrentWidget(ui->tabBar->getLastTab());
             event->accept();
             break;
         default:
@@ -443,7 +461,7 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
             event->accept();
         } break;
         case Qt::Key_Backtab: // Go to previous tab
-            _tabManager->setCurrentWidget(ui->tabBar->getPreviousWidget());
+            _tabManager->setCurrentWidget(ui->tabBar->getPreviousTab());
             event->accept();
             break;
         default:

@@ -35,8 +35,8 @@ int MainTabBarElement::tabHeight()
     return 3 * MARGIN + TAB_ICON_SIZE;
 }
 
-MainTabBarElement::MainTabBarElement(QWidget * widget, QString iconName, bool isColored, QFontMetrics fm) :
-    _widget(widget),
+MainTabBarElement::MainTabBarElement(Tab * tab, QString iconName, bool isColored, QFontMetrics fm) :
+    _tab(tab),
     _iconName(iconName),
     _isEnabled(false),
     _gradient(QPointF(0, 0), QPointF(0, 1)),

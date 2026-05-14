@@ -25,7 +25,7 @@
 #ifndef EDITOR_H
 #define EDITOR_H
 
-#include "tab.h"
+#include "soundfonttab.h"
 #include "basetypes.h"
 
 class PageSelector;
@@ -36,7 +36,7 @@ namespace Ui {
 class Editor;
 }
 
-class Editor : public Tab
+class Editor : public SoundfontTab
 {
     Q_OBJECT
 
@@ -48,6 +48,7 @@ public:
     bool processKey(int channel, int key, int vel) override;
 
     void selectElement(EltID id);
+    void onActionRequired(TabAction action) override;
 
 signals:
     void processKeyMainThread(int channel, int key, int vel);

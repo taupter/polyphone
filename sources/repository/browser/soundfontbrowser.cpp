@@ -35,8 +35,7 @@
 
 const int SoundfontBrowser::ITEMS_PER_PAGE = 25;
 
-SoundfontBrowser::SoundfontBrowser(QWidget *parent) :
-    QWidget(parent),
+SoundfontBrowser::SoundfontBrowser(QWidget *parent) : Tab(parent),
     ui(new Ui::SoundfontBrowser),
     _loadingFilter(false),
     _currentPage(0)
@@ -452,5 +451,16 @@ void SoundfontBrowser::on_pushGoNext_clicked()
     {
         _currentPage++;
         updatePage();
+    }
+}
+
+void SoundfontBrowser::onActionRequired(TabAction action)
+{
+    switch (action)
+    {
+    case Tab::SEARCH:
+        ui->lineSearch->selectAll();
+        ui->lineSearch->setFocus();
+        break;
     }
 }

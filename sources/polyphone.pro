@@ -354,6 +354,7 @@ SOURCES	+= main.cpp \
     mainwindow/mainstackedwidget.cpp \
     mainwindow/maintabbar.cpp \
     mainwindow/maintabbarelement.cpp \
+    mainwindow/soundfonttab.cpp \
     mainwindow/tab.cpp \
     mainwindow/tabmanager.cpp \
     mainwindow/topbackground.cpp \
@@ -741,6 +742,7 @@ HEADERS += \
     mainwindow/mainstackedwidget.h \
     mainwindow/maintabbar.h \
     mainwindow/maintabbarelement.h \
+    mainwindow/soundfonttab.h \
     mainwindow/tab.h \
     mainwindow/tabmanager.h \
     mainwindow/topbackground.h \

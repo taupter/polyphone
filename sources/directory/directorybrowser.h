@@ -25,7 +25,7 @@
 #ifndef DIRECTORYBROWSER_H
 #define DIRECTORYBROWSER_H
 
-#include <QWidget>
+#include "tab.h"
 #include "basetypes.h"
 class QFileSystemWatcher;
 
@@ -33,7 +33,7 @@ namespace Ui {
 class DirectoryBrowser;
 }
 
-class DirectoryBrowser : public QWidget
+class DirectoryBrowser : public Tab
 {
     Q_OBJECT
 
@@ -43,6 +43,8 @@ public:
 
     void initialize(QString dirPath);
     QString getDirectoryPath() { return _dirPath; }
+
+    void onActionRequired(TabAction action) override;
 
 signals:
     void itemDoubleClicked(QString filePath, EltID id);

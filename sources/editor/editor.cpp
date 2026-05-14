@@ -37,7 +37,7 @@
 #include "dialogkeyboard.h"
 #include "pianokeybdcustom.h"
 
-Editor::Editor(DialogKeyboard * dialogKeyboard, EltID initialSelection) : Tab(nullptr),
+Editor::Editor(DialogKeyboard * dialogKeyboard, EltID initialSelection) : SoundfontTab(nullptr),
     _dialogKeyboard(dialogKeyboard),
     ui(new Ui::Editor),
     _pageSelector(new PageSelector()),
@@ -58,7 +58,11 @@ Editor::Editor(DialogKeyboard * dialogKeyboard, EltID initialSelection) : Tab(nu
     ui->editFilter->setStyleSheet("QLineEdit{border: 0}");
     ui->frameSearch->setStyleSheet("QFrame{background-color:" +
                                    highlightColorBackground + "}");
-    ui->editFilter->setStyleSheet("QLineEdit{background-color:" + highlightColorBackground + ";color:" + highlightColorText + ";}");
+    ui->editFilter->setStyleSheet("QLineEdit{background-color:" + highlightColorBackground +
+                                  ";color:" + highlightColorText +
+                                  ";selection-background-color:" + highlightColorText +
+                                  ";selection-color:" + highlightColorBackground +
+                                  ";}");
     ui->treeView->setStyleSheet("TreeView{border:1px solid " +
                                 ContextManager::theme()->getColor(ThemeManager::BORDER).name() +
                                 ";border-top:0;border-left:0;border-bottom:0}");
@@ -114,7 +118,6 @@ Editor::Editor(DialogKeyboard * dialogKeyboard, EltID initialSelection) : Tab(nu
     connect(ui->toolBar, SIGNAL(selectionChanged(IdList)), ui->treeView, SLOT(onSelectionChanged(IdList)));
 
     // Other
-    connect(ui->treeView, SIGNAL(focusOnSearch()), ui->editFilter, SLOT(setFocus()));
     connect(SoundfontManager::getInstance(), SIGNAL(parameterForCustomizingKeyboardChanged()), this, SLOT(customizeKeyboard()));
     connect(SoundfontManager::getInstance(), SIGNAL(editingDone(QString, QList<int>)), this, SLOT(onEditingDone(QString, QList<int>)));
     connect(SoundfontManager::getInstance(), SIGNAL(errorEncountered(QString)), this, SLOT(onErrorEncountered(QString)));
@@ -679,5 +682,16 @@ void Editor::onProcessKeyMainThread(int channel, int key, int vel)
             if (!currentIds.isEmpty())
                 ui->treeView->onSelectionChanged(currentIds);
         }
+    }
+}
+
+void Editor::onActionRequired(TabAction action)
+{
+    switch (action)
+    {
+    case Tab::SEARCH:
+        ui->editFilter->selectAll();
+        ui->editFilter->setFocus();
+        break;
     }
 }

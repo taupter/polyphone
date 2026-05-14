@@ -89,8 +89,8 @@ TabManager::~TabManager()
     delete _userTab;
     while (_stackedWidget->count() > 0)
     {
-        QWidget * widget = _stackedWidget->widget(0);
-        _stackedWidget->removeWidgetWithTab(widget);
+        Tab * tab = (Tab *)_stackedWidget->widget(0);
+        _stackedWidget->removeWidgetWithTab(tab);
     }
     QApplication::processEvents();
     while (!_tabs.isEmpty())
@@ -155,7 +155,7 @@ void TabManager::openSoundfont(QString fileName, PlayerOptions *playerOptions, b
     // Find the corresponding editor if the file is already open (not in synth mode)
     if (!ContextManager::s_playerMode && indexSf2 != -1)
     {
-        foreach (Tab * tab, _tabs)
+        foreach (SoundfontTab * tab, _tabs)
         {
             if (tab->getSf2Index() == indexSf2)
             {
@@ -171,7 +171,7 @@ void TabManager::openSoundfont(QString fileName, PlayerOptions *playerOptions, b
     }
 
     // Otherwise, create a new editor or player
-    Tab * tab = ContextManager::s_playerMode ? (Tab *)(new Player(playerOptions)) : (Tab *)(new Editor(_dialogKeyboard, initialSelection));
+    SoundfontTab * tab = ContextManager::s_playerMode ? (SoundfontTab *)(new Player(playerOptions)) : (SoundfontTab *)(new Editor(_dialogKeyboard, initialSelection));
     int index = _stackedWidget->addWidgetWithTab(tab, ":/icons/file-audio.svg", QFileInfo(fileName).baseName(), true);
     connect(tab, SIGNAL(tabTitleChanged(QString)), this, SLOT(onTabTitleChanged(QString)));
     connect(tab, SIGNAL(filePathChanged(QString)), this, SLOT(onFilePathChanged(QString)));
@@ -220,7 +220,7 @@ void TabManager::openDirectory(QString directoryPath)
     DirectoryBrowser * browser = new DirectoryBrowser();
     connect(browser, SIGNAL(itemDoubleClicked(QString,EltID)), this, SLOT(openSoundfont(QString,EltID)));
     int index = _stackedWidget->addWidgetWithTab(browser, ":/icons/folder.svg", dirName, true);
-    _stackedWidget->setWidgetToolTip(browser, directoryPath);
+    _stackedWidget->setTabToolTip(browser, directoryPath);
     _dirBrowsers << browser;
 
     // Initialize and display it
@@ -249,32 +249,32 @@ void TabManager::openRepository(SoundfontFilter *filter)
 void TabManager::editingDone(QString source, QList<int> sf2Indexes)
 {
     // Update all editing pages related to one of the edited sf2
-    foreach (Tab * tab, _tabs)
+    foreach (SoundfontTab * tab, _tabs)
         if (sf2Indexes.contains(tab->getSf2Index()))
             tab->update(source);
 }
 
 void TabManager::onTabTitleChanged(QString title)
 {
-    _stackedWidget->setWidgetLabel(dynamic_cast<Tab *>(QObject::sender()), title);
+    _stackedWidget->setTabLabel(dynamic_cast<SoundfontTab *>(QObject::sender()), title);
 }
 
 void TabManager::onFilePathChanged(QString filePath)
 {
-    _stackedWidget->setWidgetToolTip(dynamic_cast<Tab *>(QObject::sender()), filePath);
+    _stackedWidget->setTabToolTip(dynamic_cast<SoundfontTab *>(QObject::sender()), filePath);
 }
 
 void TabManager::onTabCloseRequested(QWidget * widget)
 {
     SoundfontManager * sf2 = SoundfontManager::getInstance();
-    if (_tabs.contains(dynamic_cast<Tab *>(widget)))
+    if (_tabs.contains(dynamic_cast<SoundfontTab *>(widget)))
     {
         // Close a soundfont
-        Tab * tab = dynamic_cast<Tab *>(widget);
-        tab->setFocus();
+        SoundfontTab * soundfontTab = dynamic_cast<SoundfontTab *>(widget);
+        soundfontTab->setFocus();
 
         int ret;
-        EltID id(elementSf2, tab->getSf2Index());
+        EltID id(elementSf2, soundfontTab->getSf2Index());
         if (sf2->isEdited(id.indexSf2) && !ContextManager::s_playerMode)
         {
             QMessageBox msgBox(_stackedWidget);
@@ -311,9 +311,9 @@ void TabManager::onTabCloseRequested(QWidget * widget)
         }
 
         // Delete the tab
-        _tabs.removeAll(tab);
-        _stackedWidget->removeWidgetWithTab(widget);
-        delete tab;
+        _tabs.removeAll(soundfontTab);
+        _stackedWidget->removeWidgetWithTab(soundfontTab);
+        delete soundfontTab;
 
         // Mute all sounds produced by the soundfont, if any
         ContextManager::audio()->getSynth()->play(id, -2, -2, 0);
@@ -322,9 +322,9 @@ void TabManager::onTabCloseRequested(QWidget * widget)
         if (id.indexSf2 >= 0)
         {
             bool used = false;
-            foreach (Tab * otherTab, _tabs)
+            foreach (SoundfontTab * otherTab, _tabs)
             {
-                if (otherTab == tab)
+                if (otherTab == soundfontTab)
                     continue;
 
                 if (otherTab->getSf2Index() == id.indexSf2)
@@ -367,7 +367,8 @@ void TabManager::onTabCloseRequested(QWidget * widget)
         // Close a soundfont from the repository
         SoundfontViewer * viewer = dynamic_cast<SoundfontViewer*>(widget);
         _viewers.removeAll(viewer);
-        _stackedWidget->removeWidgetWithTab(widget);
+        Tab * tab = dynamic_cast<Tab *>(widget);
+        _stackedWidget->removeWidgetWithTab(tab);
         delete viewer;
     }
     else if (_dirBrowsers.contains(dynamic_cast<DirectoryBrowser*>(widget)))
@@ -375,7 +376,8 @@ void TabManager::onTabCloseRequested(QWidget * widget)
         // Close a directory browser
         DirectoryBrowser * browser = dynamic_cast<DirectoryBrowser*>(widget);
         _dirBrowsers.removeAll(browser);
-        _stackedWidget->removeWidgetWithTab(widget);
+        Tab * tab = dynamic_cast<Tab *>(widget);
+        _stackedWidget->removeWidgetWithTab(tab);
         delete browser;
     }
 }
@@ -383,9 +385,9 @@ void TabManager::onTabCloseRequested(QWidget * widget)
 int TabManager::getCurrentSf2()
 {
     QWidget * widget = _stackedWidget->currentWidget();
-    if (_tabs.contains(dynamic_cast<Tab *>(widget)))
+    if (_tabs.contains(dynamic_cast<SoundfontTab *>(widget)))
     {
-        Tab * tab = dynamic_cast<Tab *>(widget);
+        SoundfontTab * tab = dynamic_cast<SoundfontTab *>(widget);
         return tab->getSf2Index();
     }
     return -1;
@@ -399,7 +401,7 @@ void TabManager::closeCurrentTab()
 void TabManager::onTabIndexChanged(int tabIndex)
 {
     QWidget * widget = _stackedWidget->widget(tabIndex);
-    emit tabOpen(_tabs.contains(dynamic_cast<Tab*>(widget)));
+    emit tabOpen(_tabs.contains(dynamic_cast<SoundfontTab*>(widget)));
 }
 
 void TabManager::openUser()

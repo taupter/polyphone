@@ -22,6 +22,50 @@
 **             Date: 01.01.2013                                           **
 ***************************************************************************/
 
-#include "tab.h"
+#ifndef SOUNDFONTTAB_H
+#define SOUNDFONTTAB_H
 
-Tab::Tab(QWidget *parent) : QWidget(parent) {}
+#include "tab.h"
+#include "imidilistener.h"
+class AbstractInputParser;
+
+class SoundfontTab : public Tab, public IMidiListener
+{
+    Q_OBJECT
+
+public:
+    explicit SoundfontTab(QWidget *parent = nullptr);
+    ~SoundfontTab();
+
+    /// Initialize the tab with a parser that can extract data and build a soundfont
+    void initialize(AbstractInputParser * input, bool async);
+    void initializeWithSoundfontIndex(int indexSf2);
+
+    /// Index of the soundfont created
+    int getSf2Index() { return _sf2Index; }
+
+    /// Notify that a change has been made somewhere
+    void update(QString editingSource);
+
+signals:
+    void tabTitleChanged(QString title);
+    void filePathChanged(QString filePath);
+    void recorderDisplayChanged(bool isDisplayed);
+    void keyboardDisplayChanged(bool isDisplayed);
+
+protected:
+    virtual void tabInitializing(QString filename) = 0;
+    virtual void tabInError(QString errorMessage) = 0;
+    virtual void tabInitialized(int indexSf2) = 0;
+    virtual void tabUpdate(QString editingSource) = 0;
+    virtual QString getTabTitlePrefix() { return ""; }
+
+private slots:
+    void inputProcessed();
+
+private:
+    void updateTitleAndPath();
+    int _sf2Index;
+};
+
+#endif // SOUNDFONTTAB_H

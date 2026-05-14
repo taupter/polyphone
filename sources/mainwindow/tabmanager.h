@@ -31,7 +31,7 @@ class MainStackedWidget;
 class ConfigPanel;
 class SoundfontFilter;
 class SoundfontBrowser;
-class Tab;
+class SoundfontTab;
 class UserArea;
 class SoundfontViewer;
 class PlayerOptions;
@@ -113,7 +113,7 @@ private:
     ConfigPanel * _configTab;
     SoundfontBrowser * _browserTab;
     UserArea * _userTab;
-    QList<Tab*> _tabs;
+    QList<SoundfontTab*> _tabs;
     QList<SoundfontViewer *> _viewers;
     QList<DirectoryBrowser *> _dirBrowsers;
 

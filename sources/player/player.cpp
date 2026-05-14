@@ -33,7 +33,7 @@
 bool Player::s_recorderOpen = false;
 QList<Player *> Player::s_instances;
 
-Player::Player(PlayerOptions * playerOptions, QWidget * parent) : Tab(parent),
+Player::Player(PlayerOptions * playerOptions, QWidget * parent) : SoundfontTab(parent),
     ui(new Ui::Player),
     _playerOptions(new PlayerOptions(playerOptions)),
     _synth(ContextManager::audio()->getSynth()),

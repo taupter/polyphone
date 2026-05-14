@@ -31,7 +31,7 @@
 #include <QInputDialog>
 #include <QMessageBox>
 
-DirectoryBrowser::DirectoryBrowser(QWidget *parent) : QWidget(parent),
+DirectoryBrowser::DirectoryBrowser(QWidget *parent) : Tab(parent),
     ui(new Ui::DirectoryBrowser),
     _watcher(nullptr)
 {
@@ -311,4 +311,15 @@ void DirectoryBrowser::onPrstSelectionChanged(QItemSelection selected, QItemSele
     ui->listInstruments->selectionModel()->blockSignals(true);
     ui->listInstruments->clearSelection();
     ui->listInstruments->selectionModel()->blockSignals(false);
+}
+
+void DirectoryBrowser::onActionRequired(TabAction action)
+{
+    switch (action)
+    {
+    case Tab::SEARCH:
+        ui->lineSearch->selectAll();
+        ui->lineSearch->setFocus();
+        break;
+    }
 }
