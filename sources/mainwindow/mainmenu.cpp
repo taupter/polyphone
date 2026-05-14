@@ -94,6 +94,7 @@ MainMenu::MainMenu(QWidget * parent) : QMenu(parent),
     this->addSeparator();
 
     _settingsAction = new QAction(tr("Se&ttings"), this);
+    _settingsAction->setShortcut(QString("Ctrl+,"));
     connect(_settingsAction, SIGNAL(triggered()), this, SIGNAL(openSettingsClicked()));
     this->addAction(_settingsAction);
 

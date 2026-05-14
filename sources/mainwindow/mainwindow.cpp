@@ -63,6 +63,7 @@ MainWindow::MainWindow(bool playerMode, QWidget *parent) :
     ui->setupUi(this);
     this->setWindowTitle(tr("Polyphone SoundFont Editor"));
     this->setWindowIcon(QIcon(":/misc/polyphone.png"));
+    ui->pushHome->setToolTip(tr("Home screen") + " (Ctrl+H)");
 
     // Possibly remove the window borders
     if (ContextManager::configuration()->getValue(ConfManager::SECTION_DISPLAY, "window_borders", false).toBool())
