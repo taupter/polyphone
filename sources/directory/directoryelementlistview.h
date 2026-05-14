@@ -45,8 +45,8 @@ public slots:
 signals:
     void itemDoubleClicked(QString path, EltID id);
 
-protected:
-    void mouseDoubleClickEvent(QMouseEvent *event) override;
+private slots:
+    void onActivated(const QModelIndex &index);
 
 private:
     QStandardItemModel * _model;

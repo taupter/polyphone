@@ -39,6 +39,7 @@ DirectoryElementListView::DirectoryElementListView(QWidget *parent) : QListView(
     this->setModel(_proxy);
 
     this->setItemDelegate(new DirectoryElementListDelegate(this));
+    connect(this, &QListView::activated, this, &DirectoryElementListView::onActivated);
 }
 
 void DirectoryElementListView::clear()
@@ -69,12 +70,10 @@ void DirectoryElementListView::setData(DirectoryFileData::DetailsData data, QStr
     }
 }
 
-void DirectoryElementListView::mouseDoubleClickEvent(QMouseEvent *event)
+void DirectoryElementListView::onActivated(const QModelIndex &index)
 {
-    QModelIndex index = indexAt(event->pos());
     if (index.isValid() && _type != elementUnknown)
         emit itemDoubleClicked(_path, EltID(_type, -1, index.data(Qt::UserRole + 3).toInt()));
-    QListView::mouseDoubleClickEvent(event);
 }
 
 void DirectoryElementListView::setFilter(QString filter)

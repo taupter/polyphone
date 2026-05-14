@@ -76,10 +76,10 @@ DirectoryBrowser::DirectoryBrowser(QWidget *parent) : QWidget(parent),
     connect(ui->listView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), this, SLOT(onSelectionChanged(QItemSelection,QItemSelection)));
     connect(ui->listView, SIGNAL(renameRequested(QString)), this, SLOT(onRenameRequested(QString)));
     connect(ui->listView, SIGNAL(deleteRequested(QString)), this, SLOT(onDeleteRequested(QString)));
-    connect(ui->listSamples, SIGNAL(itemDoubleClicked(QString,EltID)), this, SIGNAL(itemDoubleClicked(QString,EltID)));
     connect(ui->listSamples->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), this, SLOT(onSmplSelectionChanged(QItemSelection,QItemSelection)));
     connect(ui->listInstruments->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), this, SLOT(onInstSelectionChanged(QItemSelection,QItemSelection)));
     connect(ui->listPresets->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), this, SLOT(onPrstSelectionChanged(QItemSelection,QItemSelection)));
+    connect(ui->listSamples, SIGNAL(itemDoubleClicked(QString,EltID)), this, SIGNAL(itemDoubleClicked(QString,EltID)));
     connect(ui->listInstruments, SIGNAL(itemDoubleClicked(QString,EltID)), this, SIGNAL(itemDoubleClicked(QString,EltID)));
     connect(ui->listPresets, SIGNAL(itemDoubleClicked(QString,EltID)), this, SIGNAL(itemDoubleClicked(QString,EltID)));
 
@@ -211,7 +211,7 @@ void DirectoryBrowser::onSelectionChanged(QItemSelection selected, QItemSelectio
     }
 }
 
-void DirectoryBrowser::on_listView_doubleClicked(const QModelIndex &index)
+void DirectoryBrowser::on_listView_activated(const QModelIndex &index)
 {
     const DirectoryFileData * d = index.data(Qt::UserRole).value<const DirectoryFileData *>();
     if (d == nullptr ||

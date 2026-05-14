@@ -55,7 +55,7 @@ private slots:
     void onSmplSelectionChanged(QItemSelection selected, QItemSelection deselected);
     void onInstSelectionChanged(QItemSelection selected, QItemSelection deselected);
     void onPrstSelectionChanged(QItemSelection selected, QItemSelection deselected);
-    void on_listView_doubleClicked(const QModelIndex &index);
+    void on_listView_activated(const QModelIndex &index);
     void onRenameRequested(QString path);
     void onDeleteRequested(QString path);
 
