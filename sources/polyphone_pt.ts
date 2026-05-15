@@ -2028,99 +2028,99 @@ online</translation>
         <translation>Sem resultado</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="357"/>
+        <location filename="directory/directorybrowser.ui" line="493"/>
         <source>Instruments</source>
         <translation>Instrumentos</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="369"/>
+        <location filename="directory/directorybrowser.ui" line="587"/>
         <source>Presets</source>
         <translation>Predefinições</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="381"/>
+        <location filename="directory/directorybrowser.ui" line="399"/>
         <source>Samples</source>
         <translation>Amostras</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="550"/>
+        <location filename="directory/directorybrowser.ui" line="695"/>
         <source>Search a file, a sample, an instrument or a preset...</source>
         <translation>Procurar um arquivo, uma amostra, um instrumento ou uma predefinição...</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="112"/>
+        <location filename="directory/directorybrowser.cpp" line="125"/>
         <source>The directory &quot;%1&quot; does not exist.</source>
         <oldsource>The directory &quot;%1&quot; doesn&apos;t exist.</oldsource>
         <translation>A pasta &quot;%1&quot; não existe.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="119"/>
+        <location filename="directory/directorybrowser.cpp" line="132"/>
         <source>The directory &quot;%1&quot; is not readable.</source>
         <translation>O diretório &quot;%1&quot; não pode ser lido.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="235"/>
+        <location filename="directory/directorybrowser.cpp" line="248"/>
         <source>Rename</source>
         <translation>Renomear</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="236"/>
+        <location filename="directory/directorybrowser.cpp" line="249"/>
         <source>New name:</source>
         <translation>Novo nome:</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="238"/>
+        <location filename="directory/directorybrowser.cpp" line="251"/>
         <source>&amp;Cancel</source>
         <oldsource>Cancel</oldsource>
         <translation>Cancel&amp;ar</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="239"/>
+        <location filename="directory/directorybrowser.cpp" line="252"/>
         <source>&amp;Ok</source>
         <oldsource>Ok</oldsource>
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="250"/>
+        <location filename="directory/directorybrowser.cpp" line="263"/>
         <source>A file with this name already exists.</source>
         <translation>Já existe um arquivo com este nome.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="250"/>
-        <location filename="directory/directorybrowser.cpp" line="255"/>
-        <location filename="directory/directorybrowser.cpp" line="273"/>
+        <location filename="directory/directorybrowser.cpp" line="263"/>
+        <location filename="directory/directorybrowser.cpp" line="268"/>
+        <location filename="directory/directorybrowser.cpp" line="286"/>
         <source>Warning</source>
         <translation>Aviso</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="255"/>
+        <location filename="directory/directorybrowser.cpp" line="268"/>
         <source>Cannot rename file &quot;%1&quot;.</source>
         <translation>Não foi possível renomear o arquivo &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="263"/>
+        <location filename="directory/directorybrowser.cpp" line="276"/>
         <source>Confirm deletion</source>
         <translation>Confirmar exclusão</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="264"/>
+        <location filename="directory/directorybrowser.cpp" line="277"/>
         <source>Are you sure you want to delete file &quot;%1&quot;?</source>
         <translation>Você tem certeza que quer excluir o arquivo &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="266"/>
+        <location filename="directory/directorybrowser.cpp" line="279"/>
         <source>&amp;Yes</source>
         <oldsource>Yes</oldsource>
         <translation>&amp;Sim</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="267"/>
+        <location filename="directory/directorybrowser.cpp" line="280"/>
         <source>&amp;No</source>
         <oldsource>No</oldsource>
         <translation>&amp;Não</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="273"/>
+        <location filename="directory/directorybrowser.cpp" line="286"/>
         <source>Cannot delete file &quot;%1&quot;.</source>
         <translation>Não foi possível excluir o arquivo &quot;%1&quot;.</translation>
     </message>
@@ -2837,12 +2837,12 @@ online</translation>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="89"/>
         <source>&amp;Full screen</source>
-        <translation>&amp;Preencher tela</translation>
+        <translation>Preencher &amp;tela</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="96"/>
         <source>Se&amp;ttings</source>
-        <translation>&amp;Preferências</translation>
+        <translation>Pr&amp;eferências</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="101"/>
@@ -2856,13 +2856,14 @@ online</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
-        <source>&amp;Close file</source>
-        <translation>&amp;Fechar arquivo</translation>
+        <source>&amp;Close tab</source>
+        <oldsource>&amp;Close file</oldsource>
+        <translation>&amp;Fechar separador</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="113"/>
         <source>&amp;Quit</source>
-        <translation>&amp;Sair</translation>
+        <translation>Sai&amp;r</translation>
     </message>
 </context>
 <context>

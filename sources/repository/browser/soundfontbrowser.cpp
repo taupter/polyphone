@@ -463,6 +463,8 @@ void SoundfontBrowser::onActionRequired(TabAction action)
         ui->lineSearch->selectAll();
         ui->lineSearch->setFocus();
         break;
+    default:
+        break;
     }
 }
 

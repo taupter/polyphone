@@ -14,6 +14,9 @@ polyphone (2.6) unstable; urgency=low
   * (improvement) more accurate resampling
   * (improvement) less RAM usage
   * (improvement) a calendar is added for editing the soundfont creation date
+  * (improvement) Ctrl+W can be used for closing any kind of tab
+  * (improvement) Ctrl+F can focus on different search inputs
+  * (improvement) Ctrl+, open the settings
   * (fix) correct key ranges when saving as sfz
   * (fix) tab widths of the GUI
   * (fix) sample links are kept during an export
@@ -21,6 +24,7 @@ polyphone (2.6) unstable; urgency=low
   * (fix) velocity range in the overview tables
   * (fix) last point was hidden in the sample viewer
   * (fix) correct loop written during the sfz export
+  * (fix) close button visibility in tabs with a short title
 
  -- Davy Triponney <contact@polyphone.io>  Wed, 21 Jan 2026 10:30:00 +0100
 

@@ -342,6 +342,8 @@ void DirectoryBrowser::onActionRequired(TabAction action)
         ui->lineSearch->selectAll();
         ui->lineSearch->setFocus();
         break;
+    default:
+        break;
     }
 }
 

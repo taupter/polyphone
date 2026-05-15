@@ -32,7 +32,9 @@ class Tab: public QWidget
 public:
     enum TabAction
     {
-        SEARCH
+        SEARCH,
+        UNDO,
+        REDO
     };
 
     Tab(QWidget *parent = nullptr);

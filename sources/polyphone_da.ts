@@ -2059,99 +2059,99 @@ oversigt</translation>
         <translation>Ingen resultater</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="357"/>
+        <location filename="directory/directorybrowser.ui" line="493"/>
         <source>Instruments</source>
         <translation>Instrumenter</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="369"/>
+        <location filename="directory/directorybrowser.ui" line="587"/>
         <source>Presets</source>
         <translation>Forvalg</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="381"/>
+        <location filename="directory/directorybrowser.ui" line="399"/>
         <source>Samples</source>
         <translation>Samplinger</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="550"/>
+        <location filename="directory/directorybrowser.ui" line="695"/>
         <source>Search a file, a sample, an instrument or a preset...</source>
         <translation>Søg efter en fil, en sample, et instrument eller et preset...</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="112"/>
+        <location filename="directory/directorybrowser.cpp" line="125"/>
         <source>The directory &quot;%1&quot; does not exist.</source>
         <oldsource>The directory &quot;%1&quot; doesn&apos;t exist.</oldsource>
         <translation>Mappen &quot;%1&quot; findes ikke.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="119"/>
+        <location filename="directory/directorybrowser.cpp" line="132"/>
         <source>The directory &quot;%1&quot; is not readable.</source>
         <translation>Mappen &quot;%1&quot; kan ikke læses.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="235"/>
+        <location filename="directory/directorybrowser.cpp" line="248"/>
         <source>Rename</source>
         <translation>Omdøb</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="236"/>
+        <location filename="directory/directorybrowser.cpp" line="249"/>
         <source>New name:</source>
         <translation>Nyt navn:</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="238"/>
+        <location filename="directory/directorybrowser.cpp" line="251"/>
         <source>&amp;Cancel</source>
         <oldsource>Cancel</oldsource>
         <translation>&amp;Afbryd</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="239"/>
+        <location filename="directory/directorybrowser.cpp" line="252"/>
         <source>&amp;Ok</source>
         <oldsource>Ok</oldsource>
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="250"/>
+        <location filename="directory/directorybrowser.cpp" line="263"/>
         <source>A file with this name already exists.</source>
         <translation>En fil med dette navn findes allerede.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="250"/>
-        <location filename="directory/directorybrowser.cpp" line="255"/>
-        <location filename="directory/directorybrowser.cpp" line="273"/>
+        <location filename="directory/directorybrowser.cpp" line="263"/>
+        <location filename="directory/directorybrowser.cpp" line="268"/>
+        <location filename="directory/directorybrowser.cpp" line="286"/>
         <source>Warning</source>
         <translation>Advarsel</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="255"/>
+        <location filename="directory/directorybrowser.cpp" line="268"/>
         <source>Cannot rename file &quot;%1&quot;.</source>
         <translation>Kan ikke omdøbe filen &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="263"/>
+        <location filename="directory/directorybrowser.cpp" line="276"/>
         <source>Confirm deletion</source>
         <translation>Bekræft sletning</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="264"/>
+        <location filename="directory/directorybrowser.cpp" line="277"/>
         <source>Are you sure you want to delete file &quot;%1&quot;?</source>
         <translation>Er du sikker på, at du vil slette filen &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="266"/>
+        <location filename="directory/directorybrowser.cpp" line="279"/>
         <source>&amp;Yes</source>
         <oldsource>Yes</oldsource>
         <translation>&amp;Ja</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="267"/>
+        <location filename="directory/directorybrowser.cpp" line="280"/>
         <source>&amp;No</source>
         <oldsource>No</oldsource>
         <translation>&amp;Nej</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="273"/>
+        <location filename="directory/directorybrowser.cpp" line="286"/>
         <source>Cannot delete file &quot;%1&quot;.</source>
         <translation>Kan ikke slette filen &quot;%1&quot;.</translation>
     </message>
@@ -2889,8 +2889,9 @@ oversigt</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
-        <source>&amp;Close file</source>
-        <translation>&amp;Luk fil</translation>
+        <source>&amp;Close tab</source>
+        <oldsource>&amp;Close file</oldsource>
+        <translation>&amp;Luk faneblad</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="113"/>

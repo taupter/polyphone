@@ -2079,99 +2079,99 @@ Fundgrube</translation>
         <translation>keine Ergebnisse</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="357"/>
+        <location filename="directory/directorybrowser.ui" line="493"/>
         <source>Instruments</source>
         <translation>Instrumente</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="369"/>
+        <location filename="directory/directorybrowser.ui" line="587"/>
         <source>Presets</source>
         <translation>Presets</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="381"/>
+        <location filename="directory/directorybrowser.ui" line="399"/>
         <source>Samples</source>
         <translation>Samples</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="550"/>
+        <location filename="directory/directorybrowser.ui" line="695"/>
         <source>Search a file, a sample, an instrument or a preset...</source>
         <translation>Suche nach einer Datei, einem Sample, einem Instrument oder einem Preset...</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="112"/>
+        <location filename="directory/directorybrowser.cpp" line="125"/>
         <source>The directory &quot;%1&quot; does not exist.</source>
         <oldsource>The directory &quot;%1&quot; doesn&apos;t exist.</oldsource>
         <translation>Das Verzeichnis &quot;%1&quot; existiert nicht.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="119"/>
+        <location filename="directory/directorybrowser.cpp" line="132"/>
         <source>The directory &quot;%1&quot; is not readable.</source>
         <translation>Das Verzeichnis &quot;%1&quot; ist nicht lesbar.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="235"/>
+        <location filename="directory/directorybrowser.cpp" line="248"/>
         <source>Rename</source>
         <translation>Umbenennen</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="236"/>
+        <location filename="directory/directorybrowser.cpp" line="249"/>
         <source>New name:</source>
         <translation>neuer Name:</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="238"/>
+        <location filename="directory/directorybrowser.cpp" line="251"/>
         <source>&amp;Cancel</source>
         <oldsource>Cancel</oldsource>
         <translation>&amp;Abbrechen</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="239"/>
+        <location filename="directory/directorybrowser.cpp" line="252"/>
         <source>&amp;Ok</source>
         <oldsource>Ok</oldsource>
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="250"/>
+        <location filename="directory/directorybrowser.cpp" line="263"/>
         <source>A file with this name already exists.</source>
         <translation>Eine Datei mit diesem Namen existiert bereits.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="250"/>
-        <location filename="directory/directorybrowser.cpp" line="255"/>
-        <location filename="directory/directorybrowser.cpp" line="273"/>
+        <location filename="directory/directorybrowser.cpp" line="263"/>
+        <location filename="directory/directorybrowser.cpp" line="268"/>
+        <location filename="directory/directorybrowser.cpp" line="286"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="255"/>
+        <location filename="directory/directorybrowser.cpp" line="268"/>
         <source>Cannot rename file &quot;%1&quot;.</source>
         <translation>Die Datei &quot;%1&quot; konnte nicht umbenannt werden.</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="263"/>
+        <location filename="directory/directorybrowser.cpp" line="276"/>
         <source>Confirm deletion</source>
         <translation>Löschen bestätigen</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="264"/>
+        <location filename="directory/directorybrowser.cpp" line="277"/>
         <source>Are you sure you want to delete file &quot;%1&quot;?</source>
         <translation>Sind Sie sicher, dass Sie die Datei &quot;%1&quot; löschen möchten?</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="266"/>
+        <location filename="directory/directorybrowser.cpp" line="279"/>
         <source>&amp;Yes</source>
         <oldsource>Yes</oldsource>
         <translation>&amp;Ja</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="267"/>
+        <location filename="directory/directorybrowser.cpp" line="280"/>
         <source>&amp;No</source>
         <oldsource>No</oldsource>
         <translation>&amp;Nein</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="273"/>
+        <location filename="directory/directorybrowser.cpp" line="286"/>
         <source>Cannot delete file &quot;%1&quot;.</source>
         <translation>Die Datei &quot;%1&quot; kann nicht gelöscht werden.</translation>
     </message>
@@ -2888,7 +2888,7 @@ Fundgrube</translation>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="89"/>
         <source>&amp;Full screen</source>
-        <translation>Voll&amp;bild</translation>
+        <translation>&amp;Vollbild</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="96"/>
@@ -2903,17 +2903,18 @@ Fundgrube</translation>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
         <source>About &amp;Polyphone...</source>
-        <translation>&amp;Über Polyphone...</translation>
+        <translation>Über &amp;Polyphone...</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
-        <source>&amp;Close file</source>
-        <translation>&amp;Datei schließen</translation>
+        <source>&amp;Close tab</source>
+        <oldsource>&amp;Close file</oldsource>
+        <translation>&amp;Tab schließen</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="113"/>
         <source>&amp;Quit</source>
-        <translation>&amp;Programm beenden</translation>
+        <translation>Programm &amp;beenden</translation>
     </message>
 </context>
 <context>

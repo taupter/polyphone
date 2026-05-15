@@ -2011,94 +2011,94 @@ repository</source>
         <translation>无结果</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="357"/>
+        <location filename="directory/directorybrowser.ui" line="493"/>
         <source>Instruments</source>
         <translation>乐器</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="369"/>
+        <location filename="directory/directorybrowser.ui" line="587"/>
         <source>Presets</source>
         <translation>预设</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="381"/>
+        <location filename="directory/directorybrowser.ui" line="399"/>
         <source>Samples</source>
         <translation>采样</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.ui" line="550"/>
+        <location filename="directory/directorybrowser.ui" line="695"/>
         <source>Search a file, a sample, an instrument or a preset...</source>
         <translation>搜索文件、采样、乐器或预设...</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="112"/>
+        <location filename="directory/directorybrowser.cpp" line="125"/>
         <source>The directory &quot;%1&quot; does not exist.</source>
         <translation>目录&quot;%1&quot;不存在。</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="119"/>
+        <location filename="directory/directorybrowser.cpp" line="132"/>
         <source>The directory &quot;%1&quot; is not readable.</source>
         <translation>目录“%1”不可读。</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="235"/>
+        <location filename="directory/directorybrowser.cpp" line="248"/>
         <source>Rename</source>
         <translation>重命名</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="236"/>
+        <location filename="directory/directorybrowser.cpp" line="249"/>
         <source>New name:</source>
         <translation>新名称：</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="238"/>
+        <location filename="directory/directorybrowser.cpp" line="251"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="239"/>
+        <location filename="directory/directorybrowser.cpp" line="252"/>
         <source>&amp;Ok</source>
         <translation>确定(&amp;O)</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="250"/>
+        <location filename="directory/directorybrowser.cpp" line="263"/>
         <source>A file with this name already exists.</source>
         <translation>具有此名称的文件已存在。</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="250"/>
-        <location filename="directory/directorybrowser.cpp" line="255"/>
-        <location filename="directory/directorybrowser.cpp" line="273"/>
+        <location filename="directory/directorybrowser.cpp" line="263"/>
+        <location filename="directory/directorybrowser.cpp" line="268"/>
+        <location filename="directory/directorybrowser.cpp" line="286"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="255"/>
+        <location filename="directory/directorybrowser.cpp" line="268"/>
         <source>Cannot rename file &quot;%1&quot;.</source>
         <translation>无法重命名文件 &quot;%1&quot;。</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="263"/>
+        <location filename="directory/directorybrowser.cpp" line="276"/>
         <source>Confirm deletion</source>
         <translation>确认删除</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="264"/>
+        <location filename="directory/directorybrowser.cpp" line="277"/>
         <source>Are you sure you want to delete file &quot;%1&quot;?</source>
         <translation>您确定要删除文件“%1”吗？</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="266"/>
+        <location filename="directory/directorybrowser.cpp" line="279"/>
         <source>&amp;Yes</source>
         <translation>是(&amp;Y)</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="267"/>
+        <location filename="directory/directorybrowser.cpp" line="280"/>
         <source>&amp;No</source>
         <translation>否(&amp;N)</translation>
     </message>
     <message>
-        <location filename="directory/directorybrowser.cpp" line="273"/>
+        <location filename="directory/directorybrowser.cpp" line="286"/>
         <source>Cannot delete file &quot;%1&quot;.</source>
         <translation>无法删除文件 &quot;%1&quot;。</translation>
     </message>
@@ -2828,8 +2828,9 @@ repository</source>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
-        <source>&amp;Close file</source>
-        <translation>关闭文件(&amp;C)</translation>
+        <source>&amp;Close tab</source>
+        <oldsource>&amp;Close file</oldsource>
+        <translation>关闭标签页(&amp;C)</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="113"/>

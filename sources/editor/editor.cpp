@@ -701,6 +701,12 @@ void Editor::onActionRequired(TabAction action)
         ui->editFilter->selectAll();
         ui->editFilter->setFocus();
         break;
+    case Tab::UNDO:
+        SoundfontManager::getInstance()->undo(this->getSf2Index());
+        break;
+    case Tab::REDO:
+        SoundfontManager::getInstance()->redo(this->getSf2Index());
+        break;
     }
 }
 

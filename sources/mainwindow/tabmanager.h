@@ -87,7 +87,7 @@ signals:
     void recorderDisplayChanged(bool isDisplayed, bool propagate = true);
 
     /// Emitted when the current tab changed
-    void tabOpen(bool isOpen);
+    void tabOpen(bool canSave, bool canExport, bool canClose);
 
 private slots:
     /// Called when the name or the filepath of a soundfont changed
@@ -113,9 +113,9 @@ private:
     ConfigPanel * _configTab;
     SoundfontBrowser * _browserTab;
     UserArea * _userTab;
-    QList<SoundfontTab*> _tabs;
-    QList<SoundfontViewer *> _viewers;
-    QList<DirectoryBrowser *> _dirBrowsers;
+    QList<SoundfontTab *> _soundfontTabs;
+    QList<SoundfontViewer *> _viewerTabs;
+    QList<DirectoryBrowser *> _dirBrowserTabs;
 
     static TabManager * s_instance;
 };

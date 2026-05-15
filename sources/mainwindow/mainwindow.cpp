@@ -111,7 +111,7 @@ MainWindow::MainWindow(bool playerMode, QWidget *parent) : QWidget(parent),
     connect(ui->topRightWidget, SIGNAL(openSettingsClicked()), this, SLOT(on_pushButtonSettings_clicked()));
     connect(ui->topRightWidget, SIGNAL(onlineHelpClicked()), this, SLOT(on_pushButtonDocumentation_clicked()));
     connect(ui->topRightWidget, SIGNAL(aboutClicked()), this, SLOT(onAboutClicked()));
-    connect(ui->topRightWidget, SIGNAL(closeFileClicked()), this, SLOT(onCloseFile()));
+    connect(ui->topRightWidget, SIGNAL(closeTabClicked()), this, SLOT(onCloseTab()));
     connect(ui->topRightWidget, SIGNAL(closeClicked()), this, SLOT(close()));
     connect(ui->topRightWidget, SIGNAL(minimizeClicked()), this, SLOT(showMinimized()));
     connect(ui->topRightWidget, SIGNAL(save()), this, SLOT(onSave()));
@@ -132,7 +132,7 @@ MainWindow::MainWindow(bool playerMode, QWidget *parent) : QWidget(parent),
     connect(ui->widgetShowSoundfonts, SIGNAL(itemClicked(SoundfontFilter*)), _tabManager, SLOT(openRepository(SoundfontFilter*)));
     connect(_tabManager, SIGNAL(keyboardDisplayChanged(bool,bool)), this, SLOT(onKeyboardDisplayChange(bool,bool)));
     connect(_tabManager, SIGNAL(recorderDisplayChanged(bool,bool)), this, SLOT(onRecorderDisplayChange(bool,bool)));
-    connect(_tabManager, SIGNAL(tabOpen(bool)), ui->topRightWidget, SLOT(onTabOpen(bool)));
+    connect(_tabManager, SIGNAL(tabOpen(bool,bool,bool)), ui->topRightWidget, SLOT(onTabOpen(bool,bool,bool)));
 
 #ifdef NO_SF2_REPOSITORY
     ui->widgetRepo->hide();
@@ -417,15 +417,15 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
             event->accept();
             break;
         case Qt::Key_Y: { // Redo
-            int currentSf2 = _tabManager->getCurrentSf2();
-            if (currentSf2 != -1)
-                SoundfontManager::getInstance()->redo(currentSf2);
+            Tab * currentTab = ui->tabBar->getCurrentTab();
+            if (currentTab != nullptr)
+                currentTab->onActionRequired(Tab::REDO);
             event->accept();
         } break;
         case Qt::Key_Z: { // Undo
-            int currentSf2 = _tabManager->getCurrentSf2();
-            if (currentSf2 != -1)
-                SoundfontManager::getInstance()->undo(currentSf2);
+            Tab * currentTab = ui->tabBar->getCurrentTab();
+            if (currentTab != nullptr)
+                currentTab->onActionRequired(Tab::UNDO);
             event->accept();
         } break;
         case Qt::Key_Home: // Go to the first tab
@@ -453,9 +453,9 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
         switch (event->key())
         {
         case Qt::Key_Z: { // Redo
-            int currentSf2 = _tabManager->getCurrentSf2();
-            if (currentSf2 != -1)
-                SoundfontManager::getInstance()->redo(currentSf2);
+            Tab * currentTab = ui->tabBar->getCurrentTab();
+            if (currentTab != nullptr)
+                currentTab->onActionRequired(Tab::REDO);
             event->accept();
         } break;
         case Qt::Key_Backtab: // Go to previous tab
@@ -480,10 +480,9 @@ void MainWindow::onAboutClicked()
     _dialogAbout.show();
 }
 
-void MainWindow::onCloseFile()
+void MainWindow::onCloseTab()
 {
-    if (_tabManager->getCurrentSf2() != -1)
-        _tabManager->closeCurrentTab();
+    _tabManager->closeCurrentTab();
 }
 
 void MainWindow::onSave()
