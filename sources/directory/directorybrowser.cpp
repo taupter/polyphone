@@ -66,6 +66,12 @@ DirectoryBrowser::DirectoryBrowser(QWidget *parent) : Tab(parent),
     ui->iconInstrument->setPixmap(ContextManager::theme()->getColoredSvg(":/icons/instrument.svg", QSize(16, 16), replacement));
     replacement["currentColor"] = ContextManager::theme()->getFixedColor(ThemeManager::RED, ThemeManager::WINDOW_BACKGROUND).name();
     ui->iconPreset->setPixmap(ContextManager::theme()->getColoredSvg(":/icons/preset.svg", QSize(16, 16), replacement));
+    ui->pushShowSamples->setStyleSheet("QPushButton:focus {border: 2px solid " + highlightedBackground + "; border-radius: 2px;}");
+    updateShowIcon(ui->pushShowSamples);
+    ui->pushShowInstruments->setStyleSheet("QPushButton:focus {border: 2px solid " + highlightedBackground + "; border-radius: 2px;}");
+    updateShowIcon(ui->pushShowInstruments);
+    ui->pushShowPresets->setStyleSheet("QPushButton:focus {border: 2px solid " + highlightedBackground + "; border-radius: 2px;}");
+    updateShowIcon(ui->pushShowPresets);
 
     // Connections
     connect(ui->widgetSortMenu, SIGNAL(currentIndexChanged(int)), ui->listView, SLOT(setSortType(int)));
@@ -84,6 +90,13 @@ DirectoryBrowser::DirectoryBrowser(QWidget *parent) : Tab(parent),
     connect(ui->listInstruments, SIGNAL(itemDoubleClicked(QString,EltID)), this, SIGNAL(itemDoubleClicked(QString,EltID)));
     connect(ui->listPresets, SIGNAL(itemDoubleClicked(QString,EltID)), this, SIGNAL(itemDoubleClicked(QString,EltID)));
     ui->lineSearch->installEventFilter(this);
+    ui->listView->installEventFilter(this);
+    ui->pushShowSamples->installEventFilter(this);
+    ui->listSamples->installEventFilter(this);
+    ui->pushShowInstruments->installEventFilter(this);
+    ui->listInstruments->installEventFilter(this);
+    ui->pushShowPresets->installEventFilter(this);
+    ui->listPresets->installEventFilter(this);
 
     // Splitter
     CustomSplitter * splitter = new CustomSplitter(this, ui->widgetLeft, ui->widgetRight, "directory_browser_splitter_sizes");
@@ -281,10 +294,12 @@ void DirectoryBrowser::onSmplSelectionChanged(QItemSelection selected, QItemSele
     ui->listInstruments->selectionModel()->blockSignals(true);
     ui->listInstruments->clearSelection();
     ui->listInstruments->selectionModel()->blockSignals(false);
+    ui->listInstruments->viewport()->update();
 
     ui->listPresets->selectionModel()->blockSignals(true);
     ui->listPresets->clearSelection();
     ui->listPresets->selectionModel()->blockSignals(false);
+    ui->listPresets->viewport()->update();
 }
 
 void DirectoryBrowser::onInstSelectionChanged(QItemSelection selected, QItemSelection deselected)
@@ -295,10 +310,12 @@ void DirectoryBrowser::onInstSelectionChanged(QItemSelection selected, QItemSele
     ui->listSamples->selectionModel()->blockSignals(true);
     ui->listSamples->clearSelection();
     ui->listSamples->selectionModel()->blockSignals(false);
+    ui->listSamples->viewport()->update();
 
     ui->listPresets->selectionModel()->blockSignals(true);
     ui->listPresets->clearSelection();
     ui->listPresets->selectionModel()->blockSignals(false);
+    ui->listPresets->viewport()->update();
 }
 
 void DirectoryBrowser::onPrstSelectionChanged(QItemSelection selected, QItemSelection deselected)
@@ -309,10 +326,12 @@ void DirectoryBrowser::onPrstSelectionChanged(QItemSelection selected, QItemSele
     ui->listSamples->selectionModel()->blockSignals(true);
     ui->listSamples->clearSelection();
     ui->listSamples->selectionModel()->blockSignals(false);
+    ui->listSamples->viewport()->update();
 
     ui->listInstruments->selectionModel()->blockSignals(true);
     ui->listInstruments->clearSelection();
     ui->listInstruments->selectionModel()->blockSignals(false);
+    ui->listInstruments->viewport()->update();
 }
 
 void DirectoryBrowser::onActionRequired(TabAction action)
@@ -326,20 +345,196 @@ void DirectoryBrowser::onActionRequired(TabAction action)
     }
 }
 
+void DirectoryBrowser::on_pushShowSamples_toggled(bool checked)
+{
+    updateShowIcon(ui->pushShowSamples);
+    ui->listSamples->setVisible(checked);
+    updateVerticalSpacer();
+}
+
+void DirectoryBrowser::on_pushShowInstruments_toggled(bool checked)
+{
+    updateShowIcon(ui->pushShowInstruments);
+    ui->listInstruments->setVisible(checked);
+    updateVerticalSpacer();
+}
+
+void DirectoryBrowser::on_pushShowPresets_toggled(bool checked)
+{
+    updateShowIcon(ui->pushShowPresets);
+    ui->listPresets->setVisible(checked);
+    updateVerticalSpacer();
+}
+
+void DirectoryBrowser::updateVerticalSpacer()
+{
+    if (ui->listSamples->isHidden() && ui->listInstruments->isHidden() && ui->listPresets->isHidden())
+        ui->verticalSpacer->changeSize(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+    else if (ui->listPresets->isHidden())
+        ui->verticalSpacer->changeSize(20, 6, QSizePolicy::Minimum, QSizePolicy::Fixed);
+    else
+        ui->verticalSpacer->changeSize(0, 0, QSizePolicy::Minimum, QSizePolicy::Fixed);
+    ui->verticalLayout_2->invalidate();
+}
+
+void DirectoryBrowser::updateShowIcon(QPushButton * button)
+{
+    button->setIcon(ContextManager::theme()->getColoredSvg(button->isChecked() ? ":/icons/arrow_down.svg" : ":/icons/arrow_up.svg",
+                                                           QSize(16, 16), ThemeManager::WINDOW_TEXT));
+}
+
 bool DirectoryBrowser::eventFilter(QObject *obj, QEvent *event)
 {
-    if (obj == ui->lineSearch && event->type() == QEvent::KeyPress)
+    // Navigation with arrows between widgets
+    if (event->type() == QEvent::KeyPress)
     {
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
-        if (keyEvent->key() == Qt::Key_Down)
+        switch (keyEvent->key())
         {
-            // Select the first element in the list (if any)
-            if (ui->listView->model() && ui->listView->model()->rowCount() > 0)
+        case Qt::Key_Up:
+            if (obj == ui->listView)
+            {
+                QModelIndex index = ui->listView->currentIndex();
+                if (index.isValid() && index.row() == 0)
+                {
+                    ui->lineSearch->selectAll();
+                    ui->lineSearch->setFocus();
+                    return true;
+                }
+            }
+            else if (obj == ui->pushShowSamples)
             {
                 ui->listView->setFocus();
-                ui->listView->setCurrentIndex(ui->listView->model()->index(0, 0));
+                return true;
             }
-            return true;
+            else if (obj == ui->pushShowInstruments)
+            {
+                ui->pushShowSamples->setFocus();
+                return true;
+            }
+            else if (obj == ui->pushShowPresets)
+            {
+                ui->pushShowInstruments->setFocus();
+                return true;
+            }
+            break;
+        case Qt::Key_Down:
+            if (obj == ui->lineSearch)
+            {
+                // Select the first element in the list (if any)
+                if (ui->listView->model() && ui->listView->model()->rowCount() > 0)
+                {
+                    ui->listView->setFocus();
+                    if (!ui->listView->selectionModel()->hasSelection())
+                        ui->listView->setCurrentIndex(ui->listView->model()->index(0, 0));
+                }
+                return true;
+            }
+            else if (obj == ui->pushShowSamples)
+            {
+                ui->pushShowInstruments->setFocus();
+                return true;
+            }
+            else if (obj == ui->pushShowInstruments)
+            {
+                ui->pushShowPresets->setFocus();
+                return true;
+            }
+            else if (obj == ui->pushShowPresets)
+            {
+                return true;
+            }
+            break;
+        case Qt::Key_Right:
+            if (obj == ui->listView)
+            {
+                ui->pushShowSamples->setFocus();
+                return true;
+            }
+            else if (obj == ui->pushShowSamples)
+            {
+                if (ui->pushShowSamples->isChecked())
+                {
+                    if (ui->listSamples->model()->rowCount() > 0)
+                    {
+                        ui->listSamples->setFocus();
+                        if (!ui->listSamples->selectionModel()->hasSelection())
+                            ui->listSamples->setCurrentIndex(ui->listSamples->model()->index(0, 0));
+                    }
+                }
+                else
+                    ui->pushShowSamples->setChecked(true);
+                return true;
+            }
+            else if (obj == ui->pushShowInstruments)
+            {
+                if (ui->pushShowInstruments->isChecked())
+                {
+                    if (ui->listInstruments->model()->rowCount() > 0)
+                    {
+                        ui->listInstruments->setFocus();
+                        if (!ui->listInstruments->selectionModel()->hasSelection())
+                            ui->listInstruments->setCurrentIndex(ui->listInstruments->model()->index(0, 0));
+                    }
+                }
+                else
+                    ui->pushShowInstruments->setChecked(true);
+                return true;
+            }
+            else if (obj == ui->pushShowPresets)
+            {
+                if (ui->pushShowPresets->isChecked())
+                {
+                    if (ui->listPresets->model()->rowCount() > 0)
+                    {
+                        ui->listPresets->setFocus();
+                        if (!ui->listPresets->selectionModel()->hasSelection())
+                            ui->listPresets->setCurrentIndex(ui->listPresets->model()->index(0, 0));
+                    }
+                }
+                else
+                    ui->pushShowPresets->setChecked(true);
+                return true;
+            }
+            break;
+        case Qt::Key_Left:
+            if (obj == ui->listView)
+            {
+                ui->lineSearch->selectAll();
+                ui->lineSearch->setFocus();
+                return true;
+            }
+            else if (obj == ui->pushShowSamples)
+            {
+                ui->pushShowSamples->setChecked(false);
+                return true;
+            }
+            else if (obj == ui->pushShowInstruments)
+            {
+                ui->pushShowInstruments->setChecked(false);
+                return true;
+            }
+            else if (obj == ui->pushShowPresets)
+            {
+                ui->pushShowPresets->setChecked(false);
+                return true;
+            }
+            else if (obj == ui->listSamples)
+            {
+                ui->pushShowSamples->setFocus();
+                return true;
+            }
+            else if (obj == ui->listInstruments)
+            {
+                ui->pushShowInstruments->setFocus();
+                return true;
+            }
+            else if (obj == ui->listPresets)
+            {
+                ui->pushShowPresets->setFocus();
+                return true;
+            }
+            break;
         }
     }
 

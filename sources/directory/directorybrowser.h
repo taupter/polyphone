@@ -28,6 +28,7 @@
 #include "tab.h"
 #include "basetypes.h"
 class QFileSystemWatcher;
+class QPushButton;
 
 namespace Ui {
 class DirectoryBrowser;
@@ -63,8 +64,14 @@ private slots:
     void on_listView_activated(const QModelIndex &index);
     void onRenameRequested(QString path);
     void onDeleteRequested(QString path);
+    void on_pushShowSamples_toggled(bool checked);
+    void on_pushShowInstruments_toggled(bool checked);
+    void on_pushShowPresets_toggled(bool checked);
 
 private:
+    void updateVerticalSpacer();
+    void updateShowIcon(QPushButton * button);
+
     Ui::DirectoryBrowser *ui;
     QString _dirPath;
     QFileSystemWatcher * _watcher;
