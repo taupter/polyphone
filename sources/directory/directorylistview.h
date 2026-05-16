@@ -53,6 +53,9 @@ public slots:
     void setSortType(int sortType);
     void setFilter(QString filter);
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private:
     DirectorySortProxyModel * _proxy;
     DirectoryListModel * _model;

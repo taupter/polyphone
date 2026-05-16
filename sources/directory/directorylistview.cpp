@@ -77,3 +77,31 @@ void DirectoryListView::setFilter(QString filter)
     _proxy->setFilter(filter);
     emit contentChanged();
 }
+
+void DirectoryListView::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_F2 || event->key() == Qt::Key_Delete)
+    {
+        QModelIndex index = currentIndex();
+        if (index.isValid())
+        {
+            const DirectoryFileData * d = index.data(Qt::UserRole).value<const DirectoryFileData *>();
+            if (d != nullptr)
+            {
+                switch (event->key())
+                {
+                case Qt::Key_F2:
+                    emit renameRequested(d->getPath());
+                    return;
+                case Qt::Key_Delete:
+                    emit deleteRequested(d->getPath());
+                    return;
+                default:
+                    break;
+                }
+            }
+        }
+    }
+
+    QListView::keyPressEvent(event);
+}
