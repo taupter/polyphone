@@ -67,7 +67,9 @@ win32 {
     RC_FILE = ../packaging/windows/polyphone.rc
     QMAKE_CXXFLAGS += -ffloat-store
     LIBS += -lz -lwinmm -logg -lvorbis -lvorbisfile -lvorbisenc -lcrypto -lFLAC -lsndfile \
+        -LC:/msys64/mingw64/lib \
         -lole32 -lwinmm -lksuser -lmfplat -lmfuuid -lwmcodecdspuuid # <- for RtAudio
+    INCLUDEPATH += C:/msys64/mingw64/include
 
     # Files necessary for ASIO with RtAudio
     HEADERS += lib/_option_rtaudio/rtaudio/include/asio.h \
