@@ -124,6 +124,9 @@ unix:!macx {
     QMAKE_LFLAGS_RPATH=
 }
 macx {
+    QMAKE_BUNDLE = 1
+    QMAKE_TARGET_BUNDLE_PREFIX = fr.polyphone
+    TARGET = Polyphone
     QMAKE_MACOSX_DEPLOYMENT_TARGET = 12.0
     CONFIG += sdk_no_version_check
     DEFINES += USE_LOCAL_RTAUDIO USE_LOCAL_RTMIDI USE_LOCAL_STK \

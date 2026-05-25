@@ -89,14 +89,11 @@ jobs:
       - name: Deploy and create dmg
         run: |
           cd sources
-          mv ../macos/polyphone.app ../macos/Polyphone.app
-          
           macdeployqt ../macos/Polyphone.app
           xattr -cr ../macos/Polyphone.app
           codesign --force --deep --sign - ../macos/Polyphone.app
           codesign --verify --deep --strict --verbose=2 ../macos/Polyphone.app
           hdiutil create -volname "Polyphone" -srcfolder ../macos/Polyphone.app -ov -format UDZO ../macos/Polyphone.dmg
-          
           mv ../macos/Polyphone.dmg ../macos/Polyphone_${{ inputs.tag }}-macOS_12_Intel.dmg
 
       - name: Upload artifact
