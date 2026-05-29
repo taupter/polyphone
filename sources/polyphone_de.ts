@@ -60,12 +60,12 @@
     <message>
         <location filename="core/types/attribute.cpp" line="506"/>
         <source>Loop end offset</source>
-        <translation>Loop.EndOffset</translation>
+        <translation>Loop EndOffset</translation>
     </message>
     <message>
         <location filename="core/types/attribute.cpp" line="503"/>
         <source>Loop start offset (× 32768)</source>
-        <translation>Loop.StartOffset.(× 32768)</translation>
+        <translation>Loop StartOffset (× 32768)</translation>
     </message>
     <message>
         <location filename="core/types/attribute.cpp" line="512"/>
@@ -325,12 +325,12 @@
     <message>
         <location filename="core/types/attribute.cpp" line="627"/>
         <source>Fixed key</source>
-        <translation>fixierte Note</translation>
+        <translation>Fixierte Note</translation>
     </message>
     <message>
         <location filename="core/types/attribute.cpp" line="630"/>
         <source>Fixed velocity</source>
-        <translation>fixierte Anschlag</translation>
+        <translation>Fixierte Anschlag</translation>
     </message>
     <message>
         <location filename="core/types/attribute.cpp" line="633"/>
@@ -365,7 +365,7 @@
     <message>
         <location filename="core/types/attribute.cpp" line="509"/>
         <source>Loop end offset (× 32768)</source>
-        <translation>Loop.EndOffset.(× 32768)</translation>
+        <translation>Loop EndOffset (× 32768)</translation>
     </message>
     <message>
         <location filename="core/types/attribute.cpp" line="636"/>
@@ -375,7 +375,7 @@
     <message>
         <location filename="core/types/attribute.cpp" line="639"/>
         <source>Tuning (cents)</source>
-        <translation>Tuning (cents)</translation>
+        <translation>Tuning (Cents)</translation>
     </message>
     <message>
         <location filename="core/types/attribute.cpp" line="642"/>
@@ -874,8 +874,7 @@
     <message>
         <location filename="context/interface/configsectiongeneral.ui" line="186"/>
         <source>MIDI input</source>
-        <oldsource>Midi input</oldsource>
-        <translation>Midi-Eingang</translation>
+        <translation>MIDI-Eingang</translation>
     </message>
     <message>
         <location filename="context/interface/configsectiongeneral.ui" line="23"/>
@@ -901,7 +900,7 @@
     <message>
         <location filename="context/interface/configsectiongeneral.ui" line="218"/>
         <source>Stereo editing</source>
-        <translation>Stereo bearbeitung</translation>
+        <translation>Stereobearbeitung</translation>
     </message>
     <message>
         <location filename="context/interface/configsectiongeneral.ui" line="149"/>
@@ -919,7 +918,7 @@
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="33"/>
         <source>Key names</source>
-        <translation>Noten Namen</translation>
+        <translation>Notennamen</translation>
     </message>
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="148"/>
@@ -959,7 +958,7 @@
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="637"/>
         <source>general information</source>
-        <translation>allgemeine Informationen</translation>
+        <translation>Allgemeine Informationen</translation>
     </message>
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="642"/>
@@ -969,7 +968,7 @@
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="647"/>
         <source>first sample</source>
-        <translation>erstes Sample</translation>
+        <translation>Erstes Sample</translation>
     </message>
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="652"/>
@@ -979,7 +978,7 @@
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="657"/>
         <source>first instrument</source>
-        <translation>erstes Instrument</translation>
+        <translation>Erstes Instrument</translation>
     </message>
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="662"/>
@@ -989,7 +988,7 @@
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="667"/>
         <source>first preset</source>
-        <translation>erstes Preset</translation>
+        <translation>Erstes Preset</translation>
     </message>
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="71"/>
@@ -1004,7 +1003,7 @@
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="120"/>
         <source>Sort divisions</source>
-        <translation>Aufeilungen sortieren</translation>
+        <translation>Aufteilungen sortieren</translation>
     </message>
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="566"/>
@@ -1014,23 +1013,23 @@
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="613"/>
         <source>by key range</source>
-        <translation>nach Tastenbereich</translation>
+        <translation>Nach Tastenbereich</translation>
     </message>
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="618"/>
         <source>by velocity range</source>
-        <translation>nach Anschlagsbereich</translation>
+        <translation>Nach Anschlagsbereich</translation>
     </message>
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="623"/>
         <source>in alphabetical order</source>
-        <translation>alphabetische Reihenfolge</translation>
+        <translation>Alphabetische Reihenfolge</translation>
     </message>
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="628"/>
         <source>none</source>
         <comment>speaking of the &quot;sort divisions&quot;</comment>
-        <translation>keine</translation>
+        <translation>Keine</translation>
     </message>
     <message>
         <location filename="context/interface/configsectioninterface.ui" line="134"/>
@@ -1509,7 +1508,7 @@ Fundgrube</translation>
     <message>
         <location filename="dialogs/dialog_about.ui" line="29"/>
         <source>About</source>
-        <translation>Über</translation>
+        <translation>Information</translation>
     </message>
     <message>
         <location filename="dialogs/dialog_about.ui" line="177"/>
@@ -2605,7 +2604,7 @@ Fundgrube</translation>
     <message>
         <location filename="editor/widgets/equalizer.ui" line="586"/>
         <source>preview</source>
-        <translation>vorhören</translation>
+        <translation>Vorhören</translation>
     </message>
     <message>
         <location filename="editor/widgets/equalizer.ui" line="618"/>
@@ -2902,8 +2901,8 @@ Fundgrube</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>Über &amp;Polyphone...</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>Über &amp;Polyphone</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
@@ -3011,7 +3010,7 @@ Fundgrube</translation>
         <location filename="mainwindow/mainwindow.ui" line="334"/>
         <source>  Forum</source>
         <extracomment>prefixed with 2 spaces</extracomment>
-        <translation>  Forum / online</translation>
+        <translation>  Forum</translation>
     </message>
     <message>
         <location filename="mainwindow/mainwindow.ui" line="249"/>
@@ -3029,7 +3028,7 @@ Fundgrube</translation>
     <message>
         <location filename="mainwindow/mainwindow.ui" line="198"/>
         <source>Search a soundfont...</source>
-        <translation>nach Soundfonts suchen...</translation>
+        <translation>Nach Soundfonts suchen...</translation>
     </message>
     <message>
         <location filename="mainwindow/mainwindow.ui" line="135"/>
@@ -3136,7 +3135,7 @@ aufheben</translation>
     <message>
         <location filename="editor/modulator/modulatorcombosrc.cpp" line="64"/>
         <source>Link</source>
-        <translation>Link</translation>
+        <translation>Verbindung</translation>
     </message>
     <message>
         <location filename="editor/modulator/modulatorcombosrc.cpp" line="93"/>
@@ -3863,22 +3862,22 @@ to display its division ranges</source>
     <message>
         <location filename="editor/pagesmpl.ui" line="601"/>
         <source>Sample rate</source>
-        <translation>Sample Frequenz</translation>
-    </message>
-    <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>Typ</translation>
+        <translation>Samplefrequenz</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
-        <translation>Link</translation>
+        <translation>Verbindung</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
         <translation>Verwende die geschätzte Tonhöhe und Korrektur als Werte</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation>Kanäle</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>
@@ -3912,19 +3911,19 @@ to display its division ranges</source>
         <location filename="editor/pagesmpl.cpp" line="258"/>
         <location filename="editor/pagesmpl.cpp" line="805"/>
         <source>right</source>
-        <translation>rechts</translation>
+        <translation>Rechts</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.cpp" line="259"/>
         <location filename="editor/pagesmpl.cpp" line="806"/>
         <source>left</source>
-        <translation>links</translation>
+        <translation>Links</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.cpp" line="260"/>
         <location filename="editor/pagesmpl.cpp" line="807"/>
         <source>link</source>
-        <translation>Link</translation>
+        <translation>Verbindung</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.cpp" line="312"/>
@@ -5068,7 +5067,7 @@ download the list</source>
     <message>
         <location filename="repository/browser/soundfontbrowser.ui" line="214"/>
         <source>Search a soundfont...</source>
-        <translation>nach Soundfonts suchen...</translation>
+        <translation>Nach Soundfonts suchen...</translation>
     </message>
     <message>
         <location filename="repository/browser/soundfontbrowser.ui" line="269"/>
@@ -6486,7 +6485,7 @@ Other soundfont editors might display other units.</source>
     <message>
         <location filename="editor/tools/load_from_inst/toolloadfrominst_gui.ui" line="34"/>
         <source>Tuning (cents)</source>
-        <translation>Tuning (cents)</translation>
+        <translation>Tuning (Cents)</translation>
     </message>
     <message>
         <location filename="editor/tools/load_from_inst/toolloadfrominst_gui.ui" line="41"/>

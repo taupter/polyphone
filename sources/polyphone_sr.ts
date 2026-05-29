@@ -2837,8 +2837,8 @@ repository</source>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>О &amp;Полифону...</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>О &amp;Полифону</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
@@ -3780,11 +3780,6 @@ to display its division ranges</source>
         <translation>Учестаност узорковања</translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>Врста</translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation>Веза</translation>
@@ -3793,6 +3788,11 @@ to display its division ranges</source>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
         <translation>Узми за вредности прорачунате висину тона и исправку</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation>Канал</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>

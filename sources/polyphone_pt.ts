@@ -2851,8 +2851,8 @@ online</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>Sobre &amp;Polyphone...</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>Sobre &amp;Polyphone</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
@@ -3816,11 +3816,6 @@ para exibir seus alcances de divisão</translation>
         <translation>Taxa de amostragem</translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>Tipo</translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation>Relação</translation>
@@ -3829,6 +3824,11 @@ para exibir seus alcances de divisão</translation>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
         <translation>Usar altura estimada e a correção como valores</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation>Canal</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>

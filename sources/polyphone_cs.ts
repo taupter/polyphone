@@ -2857,8 +2857,8 @@ repository</source>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>O programu &amp;Polyphone...</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>O programu &amp;Polyphone</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
@@ -3807,11 +3807,6 @@ pro zobrazení rozsahů jeho divizí</translation>
         <translation>Vzorkovací kmitočet</translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>Typ</translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation>Spojení</translation>
@@ -3820,6 +3815,11 @@ pro zobrazení rozsahů jeho divizí</translation>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
         <translation>Použít odhadovanou výšku tónu a opravu jako hodnoty</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation>Kanál</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>

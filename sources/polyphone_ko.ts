@@ -2844,7 +2844,7 @@ repository</source>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
+        <source>About &amp;Polyphone</source>
         <translation>폴리폰 정보(&amp;P)</translation>
     </message>
     <message>
@@ -3767,11 +3767,6 @@ to display its division ranges</source>
         <translation>샘플 레이트</translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>유형</translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation>연결</translation>
@@ -3780,6 +3775,11 @@ to display its division ranges</source>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
         <translation>예측된 피치와 보정을 값으로 사용</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation type="unfinished">채널</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>

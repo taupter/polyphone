@@ -2848,7 +2848,8 @@ repository</source>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
+        <source>About &amp;Polyphone</source>
+        <oldsource>About &amp;Polyphone...</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3769,11 +3770,6 @@ to display its division ranges</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation type="unfinished"></translation>
@@ -3781,6 +3777,11 @@ to display its division ranges</source>
     <message>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

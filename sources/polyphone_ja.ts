@@ -2841,8 +2841,8 @@ repository</source>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>Polyphoneについて...(&amp;P)</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>Polyphoneについて(&amp;P)</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
@@ -3773,11 +3773,6 @@ to display its division ranges</source>
         <translation>サンプルレート</translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>タイプ</translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation>リンク</translation>
@@ -3786,6 +3781,11 @@ to display its division ranges</source>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
         <translation>推定されたピッチと補正値をそのまま使用</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation>チャンネル</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>

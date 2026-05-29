@@ -104,7 +104,7 @@ MainMenu::MainMenu(QWidget * parent) : QMenu(parent),
     connect(_helpAction, SIGNAL(triggered()), this, SIGNAL(onlineHelpClicked()));
     this->addAction(_helpAction);
 
-    _helpAction = new QAction(tr("About &Polyphone..."), this);
+    _helpAction = new QAction(tr("About &Polyphone"), this);
     connect(_helpAction, SIGNAL(triggered()), this, SIGNAL(aboutClicked()));
     this->addAction(_helpAction);
 

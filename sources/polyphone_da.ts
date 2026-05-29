@@ -2884,8 +2884,8 @@ oversigt</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>Om &amp;Polyphone...</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>Om &amp;Polyphone</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
@@ -3818,11 +3818,6 @@ for at vise dets divisionsområder</translation>
         <translation>Sample rate</translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>Type</translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation>Genvej</translation>
@@ -3831,6 +3826,11 @@ for at vise dets divisionsområder</translation>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
         <translation>Brug de estimerede pitch- og korrektionsværdier</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation>Kanal</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>

@@ -2851,13 +2851,12 @@ en línea</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>S&amp;obre Polyphone...</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>S&amp;obre Polyphone</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
         <source>&amp;Close tab</source>
-        <oldsource>&amp;Close file</oldsource>
         <translation>Cerra&amp;r pestaña</translation>
     </message>
     <message>
@@ -3816,11 +3815,6 @@ para mostrar sus rangos de división</translation>
         <translation>Frecuencia de muestreo</translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>Tipo</translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation>Enlace</translation>
@@ -3829,6 +3823,11 @@ para mostrar sus rangos de división</translation>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
         <translation>Utilizar el tono estimado y la corrección como valores</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation>Canal</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>

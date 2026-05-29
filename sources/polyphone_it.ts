@@ -2849,8 +2849,8 @@ repository</source>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>Info su &amp;Polyphone...</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>Info su &amp;Polyphone</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
@@ -3813,11 +3813,6 @@ per visualizzare i suoi intervalli di divisione</translation>
         <translation>Campionamento</translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>Tipo</translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation>Collegamento</translation>
@@ -3826,6 +3821,11 @@ per visualizzare i suoi intervalli di divisione</translation>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
         <translation>Usa la stima della nota come valore</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation>Canale</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>

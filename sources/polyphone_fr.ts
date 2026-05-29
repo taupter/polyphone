@@ -2837,8 +2837,8 @@ en ligne</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>À p&amp;ropos de Polyphone...</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>À p&amp;ropos de Polyphone</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
@@ -3774,11 +3774,6 @@ pour afficher les étendues de ses divisions</translation>
         <translation>Échantillonnage</translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>Type</translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation>Lien</translation>
@@ -3787,6 +3782,11 @@ pour afficher les étendues de ses divisions</translation>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
         <translation>Utilise l&apos;estimation de la note comme valeur</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation>Canal</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>

@@ -2837,13 +2837,12 @@ en línia</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>Quant al &amp;Polyphone...</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>Quant al &amp;Polyphone</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
         <source>&amp;Close tab</source>
-        <oldsource>&amp;Close file</oldsource>
         <translation>&amp;Tanca la pestanya</translation>
     </message>
     <message>
@@ -3769,8 +3768,8 @@ per visualitzar els rangs de divisió</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>Tipus</translation>
+        <source>Channel</source>
+        <translation>Canal</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="615"/>

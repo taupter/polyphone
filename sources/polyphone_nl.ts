@@ -2850,8 +2850,8 @@ repository</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>Over &amp;Polyphone...</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>Over &amp;Polyphone</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
@@ -3777,11 +3777,6 @@ om de divisiebereiken weer te geven</translation>
         <translation>Sample rate</translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>Type</translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation>Link</translation>
@@ -3790,6 +3785,11 @@ om de divisiebereiken weer te geven</translation>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
         <translation>Gebruik de geschatte toonhoogte en correctie als waarden</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation>Kanaal</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>

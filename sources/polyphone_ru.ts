@@ -2865,8 +2865,8 @@ repository</source>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>О п&amp;рограмме Polyphone…</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>О п&amp;рограмме Polyphone</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
@@ -3780,11 +3780,6 @@ to display its division ranges</source>
         <translation>Подстройка</translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>Тип</translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation>Ссылка</translation>
@@ -3820,6 +3815,11 @@ to display its division ranges</source>
         <translatorcomment>https://ru.wikipedia.org/wiki/Частота_дискретизации
 Используется сокращение для того, чтобы интерфейс выглядел не таким растянутым.</translatorcomment>
         <translation>Частота дискр</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation>Канал</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>

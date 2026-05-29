@@ -2848,8 +2848,8 @@ online</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>O Po&amp;lyphone...</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>O Po&amp;lyphone</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="113"/>
@@ -3775,8 +3775,8 @@ to display its division ranges</source>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>Typ</translation>
+        <source>Channel</source>
+        <translation>Kanał</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="615"/>

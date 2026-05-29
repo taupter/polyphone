@@ -2823,8 +2823,8 @@ repository</source>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="107"/>
-        <source>About &amp;Polyphone...</source>
-        <translation>关于 Polyphone(&amp;P)...</translation>
+        <source>About &amp;Polyphone</source>
+        <translation>关于 Polyphone(&amp;P)</translation>
     </message>
     <message>
         <location filename="mainwindow/mainmenu.cpp" line="82"/>
@@ -3742,11 +3742,6 @@ to display its division ranges</source>
         <translation>采样率</translation>
     </message>
     <message>
-        <location filename="editor/pagesmpl.ui" line="608"/>
-        <source>Type</source>
-        <translation>类型</translation>
-    </message>
-    <message>
         <location filename="editor/pagesmpl.ui" line="615"/>
         <source>Link</source>
         <translation>链接</translation>
@@ -3755,6 +3750,11 @@ to display its division ranges</source>
         <location filename="editor/pagesmpl.ui" line="228"/>
         <source>Use the estimated pitch and correction as values</source>
         <translation>使用估算的音高和校正值</translation>
+    </message>
+    <message>
+        <location filename="editor/pagesmpl.ui" line="608"/>
+        <source>Channel</source>
+        <translation>通道</translation>
     </message>
     <message>
         <location filename="editor/pagesmpl.ui" line="669"/>
